@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page_title }}</title>
+        <title>Jonathan Kissam: developer, organizer, occasional blogger</title>
         <!-- put google fonts links here -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +30,9 @@
 		<div id="header" class="section clearfix container" role="banner">
 			<div id="header-inner" class="section-inner">
 				
-				<a href="/" id="logo"><img src="images/logo.png" alt="{{ site_name }}" /></a>
-				
 				<hgroup class="site-name-slogan">
-					<h1 class="site-name"><a href="/">{{ site_name }}</a></h1>
-					<h2 class="site-slogan">{{ site_slogan }}</h2>
+					<h1 class="site-name"><a href="/">Jonathan Kissam</a></h1>
+					<h2 class="site-slogan">developer, organizer, occasional blogger</h2>
 				</hgroup>
 				
 			</div>
@@ -44,25 +42,18 @@
 	<div id="navigation-wrapper" class="section-wrapper">
 		<nav id="navigation" class="site-navigation primary-navigation section clearfix container" role="navigation">
 			<div id="navigation-inner" class="section-inner">
-				<h2 class="navigation-header"><i class="icon navigation-icon"></i>{{ navigation_title }}</h2>
+				<h2 class="navigation-header"><i class="icon navigation-icon"></i></h2>
 				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
 				<div class="main-menu">
 					<ul id="menu-main-menu" class="main-menu">
+						<li class="menu-item"><a href="https://jonathankissam.wordpress.com/">Website</a></li>
 						<li class="menu-item has-children">
-							<a href="#">Parent page</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="#">Child Page 1</a></li>
-								<li class="menu-item"><a href="#">Child Page 2</a></li>
+							<span class="no-link">github projects</span>
+							<ul class="main-menu">
+								<li class="menu-item"><a href="https://github.com/jkissam">personal</a></li>
+								<li class="menu-item"><a href="https://github.com/webskillet">webskillet</a></li>
 							</ul>
 						</li>
-						<li class="menu-item has-children">
-							<span class="nolink">Parent (no link)</span>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="#">Child Page 1</a></li>
-								<li class="menu-item"><a href="#">Child Page 2</a></li>
-							</ul>
-						</li>
-						<li class="menu-item"><a href="#">Regular menu item</a></li>
 					</ul>
 				</div>
 			</div>
@@ -75,77 +66,23 @@
 				
 				<div id="primary" class="clearfix col-xs-12 col-sm-8">
 					<div id="content" class="site-content" role="main">
-						<div class="messages">
-							Here is a message
-						</div>
-						<p>{{ content }}</p>
-						<p><a href="#modal-example">Open modal</a></p>
-						<p>Example form:</p>
-						<form>
-							<ul>
-								<li><input type="text" value="Text input" /></li>
-								<li><input type="checkbox" /> <label>Checkbox</label></li>
-								<li><input type="radio" /> <label>Radio</label></li>
-								<li>
-									<select>
-										<option>Select an option</option>
-										<option>Or another option</option>
-									</select>
-								</li>
-								<li>
-									<textarea>Text area</textarea>
-								</li>
-								<li><input type="submit" value="submit" /></li>
-							</ul>
-						</form>
+						<p style="font-size: 6em;">Hi.</p>
+						<p>This is my github page. Not sure if much of anything will happen here.</p>
+						<p>My github projects can be found <a href="https://github.com/jkissam">here</a>. Also, I used to be part of a worker cooperative called Webskillet, so some of my older projects can be found on the <a href="https://github.com/webskillet">webskillet github</a>.</p>
+						<p>If you think any of these tools are useful, consider <a href="https://jonathankissam.wordpress.com/support/">throwing some money my way</a>.</p>
+						<p>If you want to internet-stalk me, check out my <a href="">website</a>, which has a blog and links to social media. I'm probably most active on <a href="https://www.facebook.com/jonathan.kissam">Facebook</a>, but also occasionally on Instagram, Twitter, and tumblr.</p>
 					</div>
 				</div>
 				
 				<div id="secondary" class="clearfix col-xs-12 col-sm-4">
-					<p>{{ sidebar }}</p>
+					<p>&nbsp;</p>
 				</div>
 				
-			</div>
-		</div>
-	</div>
-	
-	<div id="utility-wrapper" class="section-wrapper">
-		<div id="utility" class="section clearfix container">
-			<div id="utility-inner" class="section-inner">
-				<p>{{ utility_links }}</p>
-			</div>
-		</div>
-	</div>
-	
-	<div id="footer-wrapper" class="section-wrapper">
-		<div id="footer" class="section clearfix container">
-			<div id="footer-inner" class="section-inner row">
-				<div class="col-xs-12 col-sm-4">
-					<p>{{ footer_block }}</p>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<p>{{ footer_block }}</p>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<p>{{ footer_block }}</p>
-				</div>
 			</div>
 		</div>
 	</div>
 	
 </div> <!-- /#site-wrapper -->
-
-<div id="modals-wrapper">
-	<div class="dismiss modal-dismiss primary" title="Dismiss modal"></div>
-	<div id="modals" class="modals" role="complementary">
-		<div class="modal" id="modal-example">
-			<h2>{{ modal_title }}</h2>
-			<div class="content">
-				<p>{{ modal_content }}</p>
-			</div>
-		</div>
-	</div><!-- #modals -->
-</div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
