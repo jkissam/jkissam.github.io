@@ -595,9 +595,9 @@ jQuery(window).smartresize(function(){
 if (typeof uwfOptions == 'undefined') {
 	uwfOptions = {
 		validateForms : true,
-		fixFooter : true,
+		fixFooter : false,
 		shortenLinks : true,
-		externalLinks : true,
+		externalLinks : false,
 		externalLinksExceptions : '',
 		sectionNavigationSelector : '.section-navigation',
 		sectionNavigationPadding : 20,
