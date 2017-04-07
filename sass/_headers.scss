@@ -1,0 +1,13 @@
+// header
+
+#header { padding-top: 20px; }
+.js #header { padding-top: 50px; }
+#header #logo { display: block; width: 155px; }
+#header #logo img { display: block; }
+
+@media screen and (min-width: 768px) {
+	#header, .js #header { padding-top: 20px; }
+	#header #logo { float: left; margin-right: 20px; }
+	#header .site-name { margin-bottom: 5px; }
+	#header .site-slogan { margin-bottom: 0; }
+}
