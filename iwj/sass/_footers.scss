@@ -5,4 +5,8 @@
 .no-touch #footer-wrapper a:hover { color: $yellow; }
 #footer-wrapper.fixed { position: fixed; left: 0; right: 0; bottom: 0; }
 
+#footer .block { text-align: center; }
+#footer .links-social li { margin: 0 1em; }
+#footer .links-social .fa { font-size: 3em; }
+
 
