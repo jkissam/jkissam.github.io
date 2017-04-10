@@ -1,0 +1,11 @@
+// content
+
+.messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
+.messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
+
+// iPad in portrait mode or larger
+@media screen and (min-width: 768px) {
+
+
+
+}

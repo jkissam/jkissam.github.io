@@ -1,0 +1,86 @@
+// typography
+
+// 1.1 Body
+body { color: $base-text; font: 93.75%/1.6em $sans-serif; }
+
+// 1.2 Headers
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0 0 1em; }
+h1 { font-size: 2em; line-height: 1.2em; }
+h2 { font-size: 1.6em; line-height: 1.25em; }
+h3 { font-size: 1.3334em; line-height: 1.2em; }
+h4 { font-size: 1.2em; line-height: 1.3334em; font-weight: bold; }
+h5 { font-size: 1.0666em; font-weight: bold; margin-bottom: 0; }
+h6 { font-size: 1em; font-weight: bold; margin-bottom: 0; }
+
+// 1.3 Text
+p { margin-bottom: 1.3334em; }
+p.leftalign { text-align: left; }
+p.centeralign { text-align: center; }
+p.rightalign { text-align: right; }
+address { font-style: normal; margin-bottom: 1.3334em; }
+blockquote { margin: 0 0 0 2em; margin-bottom: 1.3334em; }
+blockquote p { margin-bottom: 0.6667em; }
+
+// 1.4 Lists
+ul, ol { margin: 0 0 1.3334em 2em; }
+ul ul, ul ol, ol ul, ol ol { margin-bottom: 0; }
+dl { margin: 0 0 1.3334em 0; }
+dt { font-weight: bold; }
+dd { margin: 0 0 1.3334em 2em; }
+dd ul, dd ol { margin-left: 0; }
+
+nav ul { margin: 0; }
+nav ul li { margin: 0; padding: 0; }
+nav ul ul { margin-left: 1em; }
+
+// 1.5 Links
+a { text-decoration: none; }
+a:link { color: $ws-blue; }
+a:visited { color: $ws-blue; }
+.no-touch a:hover { color: $ws-red; }
+a:active { color: $ws-blue; }
+
+// 1.6 Images
+img { max-width: 100%; height: auto !important; }
+.alignleft,
+.alignright,
+.aligncenter { display: block; width: auto; margin: 0 auto 1.3334em; } /* mobile-first: center everything; we'll align stuff later in the media queries */
+
+// 1.7 Tables
+th, td { padding: 0.6667em; }
+
+// 1.8 Form elements
+input, select, textarea { border: 1px solid $light-gray; color: $base-text; padding: 0.6667em; font-family: $sans-serif; width: 100%; outline: 0; }
+input:focus, select:focus, textarea:focus { border-color: $base-text; }
+input[type="checkbox"],input[type="radio"],input[type="submit"],input[type="image"] { width: auto; }
+input[type="image"] { border: 0; outline: invert none medium; }
+input[type="search"] { -webkit-appearance: none; moz-appearance: none; }
+input, select { max-width: 400px; }
+fieldset { margin: 2em 0; border-color: $light-gray; }
+legend { font: 1.3334em $sans-serif; color: $very-dark-gray; border: 1px solid $light-gray; padding: 2px 15px; background: $very-light-gray; }
+legend + * { -webkit-margin-top-collapse: separate; }
+input[type="submit"], button, a.button {
+  background: $very-dark-gray;
+  @include border-radius(0);
+  color: #fff;
+  padding: 0.4em 1em;
+  margin-right: 1em;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+.no-touch input[type="submit"]:hover, .no-touch button:hover, .no-touch a.button:hover {
+  background: $dark-gray;
+}
+form ul { list-style: none outside none; margin: 0; }
+form ul li { margin-bottom: 1em; }
+
+// 1.9 pseudo-icons
+.dismiss:before { content: "\00d7"; cursor: pointer; }
+
+// iPad in portrait mode or larger //
+@media screen and (min-width: 768px) {
+	.alignleft { float: left; margin: 0 20px 20px 0; max-width: 50%; }
+	.alignright { float: right; margin: 0 0 20px 20px; max-width: 50%; }
+	.aligncenter { display: block; width: auto; margin: 0 auto 1.3334em; }
+}

@@ -1,0 +1,15 @@
+// header
+
+#header { padding-top: 10px; }
+.js #header { padding-top: 50px; }
+#header #logo { display: block; width: 225px; }
+#header #logo img { display: block; }
+#header .site-name { margin-bottom: 10px; }
+#header .site-slogan { margin-bottom: 10px; }
+
+@media screen and (min-width: 768px) {
+	#header, .js #header { padding-top: 20px; padding-bottom: 20px; }
+	#header #logo { float: left; margin-right: 20px; }
+	#header .site-name { margin-bottom: 0; }
+	#header .site-slogan { margin-bottom: 0; }
+}

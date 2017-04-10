@@ -1,0 +1,57 @@
+// navigation
+
+.navigation-header { cursor: pointer; }
+.navigation-icon { float: left; display: block; width: 1em; height: 0; margin-top: 15px; margin-right: 0.3334em; position: relative; border-top: 4px solid $very-dark-gray; }
+.navigation-icon:before { content: ''; display: block; width: 1em; height: 0em; border-top: 4px solid $very-dark-gray; position: absolute; top: -10px; }
+.navigation-icon:after { content: ''; display: block; width: 1em; height: 0em; border-top: 4px solid $very-dark-gray; position: absolute; top: 2px; }
+
+#navigation .main-menu > ul { background: $very-light-gray; font-size: 1.6em; z-index: 500; }
+
+#navigation .main-menu > ul ul { clear: both; margin: 0; padding: 0 1em; }
+#navigation .main-menu ul li { padding: 0; border-bottom: 1px solid $light-gray; }
+#navigation .main-menu ul li a,
+#navigation .main-menu ul li span.nolink,
+#navigation .main-menu ul li span.separator { padding: 0.6em 0.8333em; display: block; line-height: 1em; }
+#navigation .main-menu ul li.has-children > a,
+#navigation .main-menu ul li.has-children > span.nolink { float: left; padding-right: 0.25em; cursor: pointer; }
+#navigation .main-menu ul li.has-children:after { content: ''; display: table; clear: both; }
+
+#navigation .main-menu li ul li { border-bottom: none; }
+
+// only apply these css styles if javascript is enabled
+.js #navigation { position: absolute; top: 0; left: 0; right: 0; }
+.js #navigation .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); padding-top: 40px; }
+.js #navigation .main-menu > ul.open { left: 0; }
+.js #navigation .main-menu > ul ul { position: absolute; left: -9999em; }
+.js #navigation .main-menu > ul ul.open { position: relative; left: auto; }
+
+#navigation .main-menu ul li.menu-dismiss { position: absolute; top: 15px; right: 15px; font-size: 2em; cursor: pointer; border-bottom: none; }
+#navigation .main-menu ul li .menu-toggle { content: ''; float: right; display: block; height: 0; width: 0; border: 0.6em solid transparent; margin: 0.8em 1em 0 0.3334em; cursor: pointer; }
+#navigation .main-menu ul li .menu-toggle.closed { border-top-color: $very-dark-gray; }
+#navigation .main-menu ul li .menu-toggle.open { margin-top: 0.2em; border-bottom-color: $very-dark-gray; }
+
+// iPad in portrait mode or larger
+@media screen and (min-width: 768px) {
+
+	#navigation, .js #navigation { position: relative; top: auto; left: auto; right: auto; }
+	#navigation .navigation-header { position: absolute; left: -999em; }
+	.main-menu ul li.menu-dismiss { display: none; }
+	#navigation .main-menu > ul, .js #navigation .main-menu > ul { width: 100%; position: relative; top: auto; bottom: auto; left: auto; overflow: visible; font-size: 1em; padding-top: 0; }
+	#navigation .main-menu > ul:after { content: ''; display: table; clear: both; }
+	#navigation .main-menu ul li { float: left; border-bottom: none; position: relative; }
+	#navigation .main-menu > ul.open { left: auto; }
+	#navigation .main-menu ul li a,
+	#navigation .main-menu ul li span.nolink,
+	#navigation .main-menu ul li span.separator { padding: 1em; }
+	#navigation .main-menu ul li.has-children > a,
+	#navigation .main-menu ul li.has-children > span.nolink { padding-right: 0.25em; }
+	#navigation .main-menu li ul { top: 3em; width: 100%; background: $very-light-gray; z-index: 500; margin-left: 0em; padding: 0; }
+	#navigation .main-menu li ul li { float: none; }
+	
+	.js #navigation .main-menu li ul { position: absolute; left: -999em; }
+	.js #navigation .main-menu li ul.open { position: absolute; left: auto; }
+	.js #navigation .main-menu li li ul.open { left: 100%; top: 0; }
+	#navigation .main-menu ul li .menu-toggle { margin-top: 1.2em; }
+	#navigation .main-menu ul li .menu-toggle.open { margin-top: 0.6em; }
+	
+}
