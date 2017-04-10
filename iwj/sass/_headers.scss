@@ -8,6 +8,19 @@
 #header .site-slogan { position: absolute; left: -999em; }
 #header { height: 105px; }
 
+#header nav.secondary { float: right; }
+#header nav.secondary li { display: inline; }
+#header nav.secondary li:before { content: ' | '; }
+#header nav.secondary li:nth-child(1):before { content: ''; }
+
+#header .links-social { float: right; clear: right; }
+
+.links-social { list-style: none outside none; }
+.links-social input { padding: 2px; width: 120px; }
+.links-social input[type="submit"] { width: 30px; margin: 0; }
+.links-social li { display: inline; }
+.links-social li span { position: absolute; left: -999em; }
+
 @media screen and (min-width: 768px) {
 	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; }
 	#header #logo { position: absolute; left: 20px; top: 20px; }
