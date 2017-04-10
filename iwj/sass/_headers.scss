@@ -16,8 +16,10 @@
 #header .links-social { float: right; clear: right; }
 
 .links-social { list-style: none outside none; }
+.links-social .fa { font-size: 1.6em; }
+.links-social .fa-envelope { display: none; }
 .links-social input { padding: 2px; width: 120px; }
-.links-social input[type="submit"] { width: 30px; margin: 0; }
+.links-social input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; }
 .links-social li { display: inline; }
 .links-social li span { position: absolute; left: -999em; }
 
