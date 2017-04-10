@@ -4,11 +4,11 @@
 body { color: $base-text; font: 93.75%/1.6em $sans-serif; }
 
 // 1.2 Headers
-h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: $header; margin: 0 0 1em; }
-h1 { font-size: 2em; line-height: 1.2em; }
-h2 { font-size: 1.6em; line-height: 1.25em; }
-h3 { font-size: 1.3334em; line-height: 1.2em; }
-h4 { font-size: 1.2em; line-height: 1.3334em; font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0 0 1em; }
+h1 { font-family: $header; font-size: 2em; line-height: 1.2em; }
+h2 { font-family: $header; font-size: 1.6em; line-height: 1.25em; color: $burgundy; }
+h3 { font-weight: bold; font-size: 1.3334em; line-height: 1.2em; }
+h4 { font-weight: bold; font-size: 1.2em; line-height: 1.3334em; font-weight: bold; }
 h5 { font-size: 1.0666em; font-weight: bold; margin-bottom: 0; }
 h6 { font-size: 1em; font-weight: bold; margin-bottom: 0; }
 
@@ -18,8 +18,9 @@ p.leftalign { text-align: left; }
 p.centeralign { text-align: center; }
 p.rightalign { text-align: right; }
 address { font-style: normal; margin-bottom: 1.3334em; }
-blockquote { margin: 0 0 0 2em; margin-bottom: 1.3334em; font-family: $cursive; }
+blockquote { margin: 0 0 1.3334em 2em; font-size: 2em; line-height: 1.3334em; font-family: $cursive; }
 blockquote p { margin-bottom: 0.6667em; }
+blockquote .attribution { text-align: right; }
 
 // 1.4 Lists
 ul, ol { margin: 0 0 1.3334em 2em; }
@@ -39,6 +40,8 @@ a:link { color: $dark-orange; }
 a:visited { color: $dark-orange; }
 .no-touch a:hover { color: $light-orange; }
 a:active { color: $dark-orange; }
+.read-more { text-align: right; }
+.read-more a { font-weight: bold; text-transform: uppercase; }
 
 // 1.6 Images
 img { max-width: 100%; height: auto !important; }
@@ -60,7 +63,7 @@ fieldset { margin: 2em 0; border-color: $light-gray; }
 legend { font: 1.3334em $sans-serif; color: $very-dark-gray; border: 1px solid $light-gray; padding: 2px 15px; background: $very-light-gray; }
 legend + * { -webkit-margin-top-collapse: separate; }
 input[type="submit"], button, a.button {
-  background: $very-dark-gray;
+  background: $burgundy;
   @include border-radius(0);
   color: #fff;
   padding: 0.4em 1em;
@@ -70,8 +73,10 @@ input[type="submit"], button, a.button {
   cursor: pointer;
 }
 .no-touch input[type="submit"]:hover, .no-touch button:hover, .no-touch a.button:hover {
-  background: $dark-gray;
+  background: $dark-orange; color: #fff;
 }
+a.button.read-more { display: block; float: right; margin: 1em 0 1em 2em; }
+
 form ul { list-style: none outside none; margin: 0; }
 form ul li { margin-bottom: 1em; }
 

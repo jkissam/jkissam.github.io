@@ -1,15 +1,16 @@
 // header
 
-#header { padding-top: 10px; }
-.js #header { padding-top: 50px; }
-#header #logo { display: block; width: 225px; }
-#header #logo img { display: block; }
-#header .site-name { margin-bottom: 10px; }
-#header .site-slogan { margin-bottom: 10px; }
+#header { padding-top: 10px; height: 155px; border-bottom: 70px solid $burgundy; }
+.js #header { padding-top: 50px; height: 195px; }
+#header #logo { display: block; z-index: 20; }
+#header #logo img { display: block; margin: 0 auto; }
+#header .site-name { position: absolute; left: -999em; }
+#header .site-slogan { position: absolute; left: -999em; }
+#header { height: 105px; }
 
 @media screen and (min-width: 768px) {
-	#header, .js #header { padding-top: 20px; padding-bottom: 20px; }
-	#header #logo { float: left; margin-right: 20px; }
+	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; }
+	#header #logo { position: absolute; left: 20px; top: 20px; }
 	#header .site-name { margin-bottom: 0; }
 	#header .site-slogan { margin-bottom: 0; }
 }
