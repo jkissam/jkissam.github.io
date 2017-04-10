@@ -1,15 +1,27 @@
 // variables
 
 // ### fonts
-$sans-serif: Arial,'Helvetica Neue',Helvetica,sans-serif;
+$sans-serif: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
+$header: 'Fjalla One','Helvetica Neue',Helvetica,Arial,sans-serif;
+$cursive: 'Felipa',cursive;
 
 // ### colors
+
+// theme colors
+$burgundy: #8C003D;
+$green: #A6B103;
+$yellow: #FFAD00;
+$light-orange: #FF9302;
+$dark-orange: #ED5600;
+
+// grayscales
 $very-dark-gray: #333333;
 $dark-gray: #666666;
 $medium-gray: #999999;
 $light-gray: #CCCCCC;
 $very-light-gray: #EEEEEE;
 $smoke: #F5F5F5;
+
 $ws-blue: #44889F;
 $ws-red: #A62A32;
 

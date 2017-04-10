@@ -4,7 +4,7 @@
 body { color: $base-text; font: 93.75%/1.6em $sans-serif; }
 
 // 1.2 Headers
-h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0 0 1em; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: $header; margin: 0 0 1em; }
 h1 { font-size: 2em; line-height: 1.2em; }
 h2 { font-size: 1.6em; line-height: 1.25em; }
 h3 { font-size: 1.3334em; line-height: 1.2em; }
@@ -18,7 +18,7 @@ p.leftalign { text-align: left; }
 p.centeralign { text-align: center; }
 p.rightalign { text-align: right; }
 address { font-style: normal; margin-bottom: 1.3334em; }
-blockquote { margin: 0 0 0 2em; margin-bottom: 1.3334em; }
+blockquote { margin: 0 0 0 2em; margin-bottom: 1.3334em; font-family: $cursive; }
 blockquote p { margin-bottom: 0.6667em; }
 
 // 1.4 Lists
@@ -35,10 +35,10 @@ nav ul ul { margin-left: 1em; }
 
 // 1.5 Links
 a { text-decoration: none; }
-a:link { color: $ws-blue; }
-a:visited { color: $ws-blue; }
-.no-touch a:hover { color: $ws-red; }
-a:active { color: $ws-blue; }
+a:link { color: $dark-orange; }
+a:visited { color: $dark-orange; }
+.no-touch a:hover { color: $light-orange; }
+a:active { color: $dark-orange; }
 
 // 1.6 Images
 img { max-width: 100%; height: auto !important; }
