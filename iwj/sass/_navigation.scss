@@ -1,9 +1,7 @@
 // navigation
 
 .navigation-header { cursor: pointer; }
-.navigation-icon { float: left; display: block; width: 1em; height: 0; margin-top: 15px; margin-right: 0.3334em; position: relative; border-top: 4px solid $very-dark-gray; }
-.navigation-icon:before { content: ''; display: block; width: 1em; height: 0em; border-top: 4px solid $very-dark-gray; position: absolute; top: -10px; }
-.navigation-icon:after { content: ''; display: block; width: 1em; height: 0em; border-top: 4px solid $very-dark-gray; position: absolute; top: 2px; }
+.navigation-header span { position: absolute; left: -999em; }
 
 #navigation-wrapper { display: none; padding: 20px 0; background: $burgundy; color: $yellow; }
 #navigation-wrapper a { color: $yellow; }

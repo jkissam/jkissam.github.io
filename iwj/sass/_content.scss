@@ -29,10 +29,12 @@
 	
 	#blog-view-front h2, #front-issues h2 { font-size: 2em; }
 	
+	#front-issues-wrapper { padding-top: 40px; }
 	#front-issues .issue-image { margin: 0 15%; }
 	#front-issues li { margin-bottom: 20px; }
 	#front-issues p { font-size: 1.3334em; }
 
+	#front-secondary-wrapper { padding: 40px 0; }
 }
 
 @media screen and (min-width: 992px) {
