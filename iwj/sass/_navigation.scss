@@ -27,7 +27,7 @@
 
 // only apply these css styles if javascript is enabled
 .js #footer nav { position: absolute; top: 0; left: 0; right: 0; }
-.js #footer .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); padding-top: 40px; -webkit-overflow-scrolling: touch; }
+.js #footer .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(ease); padding-top: 40px; -webkit-overflow-scrolling: touch; }
 .js #footer .main-menu > ul.open { left: 0; }
 .js #footer .main-menu > ul ul { position: absolute; left: -9999em; }
 .js #footer .main-menu > ul ul.open { position: relative; left: auto; }
