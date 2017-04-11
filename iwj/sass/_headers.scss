@@ -12,7 +12,7 @@
 #header nav.secondary li:before { content: ' | '; }
 #header nav.secondary li:nth-child(1):before { content: ''; }
 
-.links-social { list-style: none outside none; }
+.links-social { list-style: none outside none; margin: 0; }
 .links-social li { display: inline-block; margin-left: 0.8em; }
 .links-social li span { position: absolute; left: -999em; }
 
@@ -45,5 +45,5 @@
 	#header .site-slogan { margin-bottom: 0; }
 	#header nav.secondary { position: relative; left: auto; float: right; margin-bottom: 10px; }
 	#header .links-social, .email-signup { position: relative; top: auto; right: auto; float: right; }
-	#header .links-social { clear: right; margin: 0; }
+	#header .links-social { clear: right; }
 }
