@@ -1,5 +1,6 @@
 // header
 
+#header-wrapper { background: $light-yellow; }
 #header { padding-top: 80px; height: 225px; border-bottom: 60px solid $burgundy; }
 .js #header { padding-top: 55px; height: 205px; }
 #header #logo { display: block; z-index: 20; }
