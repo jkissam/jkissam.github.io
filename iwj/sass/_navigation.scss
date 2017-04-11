@@ -1,6 +1,6 @@
 // navigation
 
-.navigation-header { cursor: pointer; }
+.navigation-header { cursor: pointer; margin: 10px 0 0; float: left; }
 .navigation-header span { position: absolute; left: -999em; }
 
 #navigation-wrapper { display: none; padding: 20px 0; background: $burgundy; color: $yellow; }
