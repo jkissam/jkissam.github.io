@@ -7,18 +7,26 @@
 .front #quotations blockquote { margin: 20px 0; font-size: 1.3334em; }
 .front #quotations blockquote p { margin-bottom: 0; }
 
+#blog-view-front { padding-bottom: 20px; }
 #blog-view-front h2 { text-transform: uppercase; }
 
-#front-issues-wrapper { background: $light-yellow; padding: 20px 0; }
+#front-issues-wrapper { background: $light-yellow; padding: 20px 0 10px; }
+#front-issues li { margin-bottom: 10px; }
+#front-issues li:nth-of-type(3) { clear: left; }
 #front-issues h2 { text-transform: uppercase; }
 #front-issues ul { list-style: none outside none; margin: 0; padding: 0; }
 #front-issues .issue-image img { @include border-radius(50%); }
-#front-issues p { font-family: $header; text-align: center; color: $burgundy }
+#front-issues p { font-family: $header; text-align: center; color: $burgundy; margin: 0; }
 
 #front-secondary-wrapper { padding: 20px 0; }
 
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
+
+@media screen and (max-width: 767px) {
+	#blog-view-front h3, #front-secondary h2 { padding-top: 20px; border-top: 1px solid $yellow; margin-top: 20px; }
+	#blog-view-front article:nth-of-type(1) h3, #front-secondary .col-xs-12:nth-child(1) h2 { padding-top: 0; border-top: none; margin-top: 0; }
+}
 
 // iPad in portrait mode or larger
 @media screen and (min-width: 768px) {
@@ -31,7 +39,7 @@
 	
 	#front-issues-wrapper { padding-top: 40px; }
 	#front-issues .issue-image { margin: 0 15%; }
-	#front-issues li { margin-bottom: 20px; }
+	#front-issues li { margin-bottom: 30px; }
 	#front-issues p { font-size: 1.3334em; }
 
 	#front-secondary-wrapper { padding: 40px 0; }
@@ -39,6 +47,7 @@
 
 @media screen and (min-width: 992px) {
 	.front #quotations blockquote { font-size: 2em; }
+	#front-issues-wrapper { padding-bottom: 0; }
 	#front-issues .issue-image { margin: 0 20%; }
 	#front-issues li { margin-bottom: 40px; }
 	#front-issues p { font-size: 1.6667em; line-height: 1em; }

@@ -1,11 +1,11 @@
 // footers
 
-#footer-wrapper { background: $burgundy; padding-top: 10px; color: #fff; }
+#footer-wrapper { background: $burgundy; padding: 10px 0; color: #fff; }
 #footer a { color: #fff; }
 .no-touch #footer a:hover { color: $yellow; }
 #footer-wrapper.fixed { position: fixed; left: 0; right: 0; bottom: 0; }
 
-#footer .block { text-align: center; }
+#footer .block { text-align: center; margin: 10px 0; }
 
 #footer .block-wage-theft a { color: $yellow; }
 
