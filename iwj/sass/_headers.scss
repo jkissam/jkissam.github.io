@@ -29,12 +29,14 @@
 .email-signup .dismiss { display: none; font-size: 2.6em; width: 0.75em; position: relative; top: 0.2em; }
 
 @media screen and (max-width: 767px) {
+	.js #header .links-social { width: auto; height: 2em; overflow: hidden; @include transition-property(width); @include transition-duration(0.15s); @include transition-timing-function(linear); z-index: 2; }
 	.js #header .links-social .email { display: inline-block; }
 	.js #header .email-signup { overflow: hidden; top: 1px; width: 220px; height: 40px; }
 	.js #header .email-signup form { position: absolute; top: 0px; width: 220px; height: 40px; background: $light-yellow; left: 220px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); }
 	.js .email-signup .dismiss { display: inline-block; }
 	.js #header.email-open .email-signup { z-index: 5; }
 	.js #header.email-open .email-signup form { left: 0px; }
+	.js #header.email-open .links-social { width: 0; margin: 0; }
 }
 
 @media screen and (min-width: 768px) {
