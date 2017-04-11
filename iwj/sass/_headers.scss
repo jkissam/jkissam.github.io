@@ -22,7 +22,7 @@
 #header .links-social .email { display: none; }
 
 .email-signup { position: absolute; top: 45px; right: 20px; }
-.email-signup form { display: block; width: 190px; text-align: right; }
+.email-signup form { display: block; width: 220px; text-align: right; }
 .email-signup input { padding: 2px; width: 140px; }
 .email-signup input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; }
 .email-signup .dismiss { display: none; font-size: 2.6em; width: 0.75em; position: relative; top: 0.2em; }
@@ -30,7 +30,7 @@
 @media screen and (max-width: 767px) {
 	.js #header .links-social { width: auto; height: 2em; overflow: hidden; @include transition-property(width); @include transition-duration(0.15s); @include transition-timing-function(linear); z-index: 2; }
 	.js #header .links-social .email { display: inline-block; }
-	.js #header .email-signup { overflow: hidden; top: 1px; width: 220px; height: 32px; }
+	.js #header .email-signup { overflow: hidden; top: 1px; width: 220px; height: 35px; }
 	.js #header .email-signup form { position: absolute; top: 0px; width: 220px; height: 32px; background: #fff; left: 220px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); }
 	.js .email-signup .dismiss { display: inline-block; }
 	.js #header.email-open .email-signup { z-index: 5; }
