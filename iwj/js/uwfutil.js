@@ -558,6 +558,10 @@ jQuery(document).ready(function($){
 	uwfUtil.init();
 	uwfUtil.equalizeHeight( '#blog-view-front h3' );
 	uwfUtil.equalizeHeight( '#front-secondary h2' );
+	
+	// social icons opening email signup on mobile
+	$('#header .links-social .email').click( function() { jQuery('#header').addClass('email-open'); } );
+	$('#header .email-signup .dismiss').click( function() { jQuery('#header').removeClass('email-open'); } );
 });
 
 /**

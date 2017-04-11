@@ -1,31 +1,48 @@
 // header
 
-#header { padding-top: 10px; height: 155px; border-bottom: 70px solid $burgundy; }
+#header { padding-top: 80px; height: 225px; border-bottom: 60px solid $burgundy; }
 .js #header { padding-top: 50px; height: 195px; }
 #header #logo { display: block; z-index: 20; }
 #header #logo img { display: block; margin: 0 auto; }
 #header .site-name { position: absolute; left: -999em; }
 #header .site-slogan { position: absolute; left: -999em; }
-#header { height: 105px; }
 
-#header nav.secondary { float: right; }
+#header nav.secondary { position: absolute; left: -999em; }
 #header nav.secondary li { display: inline; }
 #header nav.secondary li:before { content: ' | '; }
 #header nav.secondary li:nth-child(1):before { content: ''; }
 
-#header .links-social { float: right; clear: right; padding-top: 10px; }
-
 .links-social { list-style: none outside none; }
-.links-social .fa { font-size: 1.6em; position: relative; top: 6px; }
-.links-social .fa-envelope { display: none; }
-.links-social input { padding: 2px; width: 140px; }
-.links-social input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; }
-.links-social li { display: inline; margin-left: 0.8em; }
+.links-social li { display: inline-block; margin-left: 0.8em; }
 .links-social li span { position: absolute; left: -999em; }
+
+
+
+#header .links-social { position: absolute; top: 10px; right: 20px; }
+#header .links-social .fa { font-size: 1.6em; position: relative; top: 6px; color: $dark-orange; }
+#header .links-social .fa { display: inline-block; height: 1em; top: 0; }
+#header .links-social .email { display: none; }
+
+.email-signup { position: absolute; top: 45px; right: 20px; }
+.email-signup form { display: block; width: 190px; text-align: right; }
+.email-signup input { padding: 2px; width: 140px; }
+.email-signup input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; }
+.email-signup .dismiss { display: none; font-size: 2em; position: relative; top: 0.2em; }
+
+.js #header .links-social { width: auto; height: 2em; overflow: hidden; @include transition-property(width); @include transition-duration(0.15s); @include transition-timing-function(linear); z-index: 2; }
+.js #header .links-social .email { display: inline-block; }
+.js #header .email-signup { overflow: hidden; top: 3px; width: 200px; height: 32px; }
+.js #header .email-signup form { position: absolute; top: 0px; width: 200px; height: 32px; background: #fff; left: 200px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); }
+.js .email-signup .dismiss { display: inline; }
+.js #header.email-open .email-signup { z-index: 5; }
+.js #header.email-open .email-signup form { left: 0px; }
+.js #header.email-open .links-social { width: 0; margin: 0; }
 
 @media screen and (min-width: 768px) {
 	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; }
 	#header #logo { position: absolute; left: 20px; top: 20px; }
 	#header .site-name { margin-bottom: 0; }
 	#header .site-slogan { margin-bottom: 0; }
+	#header .nav-secondary, #header .links-social { position: relative; left: auto; float: right; }
+	#header .links-social { clear: right; padding-top: 10px; }
 }
