@@ -20,6 +20,12 @@
 
 #front-secondary-wrapper { padding: 20px 0; }
 
+.hero-image-credit { margin: 0.6667em 0; font-style: italic; text-align: center; }
+
+.prevnext { margin-bottom: 1em; }
+.prev { float: left; }
+.next { float: right; }
+
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
 
@@ -43,6 +49,9 @@
 	#front-issues p { font-size: 1.3334em; }
 
 	#front-secondary-wrapper { padding: 40px 0; }
+	
+	.hero-image-container { overflow: hidden; height: 0; padding-bottom: 100%; }
+	.hero-image-container img { max-width: 160%; margin-left: -30%; }
 }
 
 @media screen and (min-width: 992px) {
