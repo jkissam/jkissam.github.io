@@ -1,12 +1,14 @@
 // header
 
-#header-wrapper { background: $light-yellow; }
+#header-wrapper { background: $very-light-orange; }
 #header { padding-top: 80px; height: 225px; border-bottom: 60px solid $burgundy; }
 .js #header { padding-top: 50px; height: 200px; }
 #header #logo { display: block; z-index: 20; }
 #header #logo img { display: block; margin: 0 auto; width: 250px; }
 #header .site-name { position: absolute; left: -999em; }
 #header .site-slogan { position: absolute; left: -999em; }
+
+#header a { color: $burgundy; }
 
 #header nav.secondary { position: absolute; left: -999em; }
 #header nav.secondary li { display: inline; }
@@ -18,7 +20,7 @@
 .links-social li span { position: absolute; left: -999em; }
 
 #header .links-social { position: absolute; top: 10px; right: 20px; }
-#header .links-social .fa { font-size: 1.6em; position: relative; top: 6px; color: $dark-orange; }
+#header .links-social .fa { font-size: 1.6em; position: relative; top: 6px; color: $burgundy; }
 #header .links-social .fa { display: inline-block; height: 1em; top: 0; }
 #header .links-social .email { display: none; }
 
@@ -33,7 +35,7 @@
 	.js #header .links-social { z-index: 2; }
 	.js #header .links-social .email { display: inline-block; }
 	.js #header .email-signup { overflow: hidden; top: 1px; width: 220px; height: 40px; }
-	.js #header .email-signup form { position: absolute; top: 0px; width: 220px; height: 40px; background: $light-yellow; left: 220px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(ease); }
+	.js #header .email-signup form { position: absolute; top: 0px; width: 220px; height: 40px; background: $very-light-orange; left: 220px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(ease); }
 	.js .email-signup .dismiss { display: inline-block; }
 	.js #header.email-open .email-signup { z-index: 5; }
 	.js #header.email-open .email-signup form { left: 0px; }
@@ -41,11 +43,16 @@
 }
 
 @media screen and (min-width: 768px) {
-	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; }
+	// #header-wrapper { background: $very-light-orange url(../images/background-header.jpg) no-repeat top center; }
+	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; background: $very-light-orange url(../images/background-header-inner.jpg) no-repeat 225px 0px; }
 	#header #logo { position: absolute; left: 20px; top: 20px; }
 	#header .site-name { margin-bottom: 0; }
 	#header .site-slogan { margin-bottom: 0; }
 	#header nav.secondary { position: relative; left: auto; float: right; margin-bottom: 10px; }
 	#header .links-social, .email-signup { position: relative; top: auto; right: auto; float: right; }
 	#header .links-social { clear: right; }
+}
+
+@media screen and (min-width: 1200px) {
+	#header, .js #header { background-position: 415px 0; }
 }
