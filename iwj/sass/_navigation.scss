@@ -27,7 +27,7 @@
 
 // only apply these css styles if javascript is enabled
 .js #footer nav { position: absolute; top: 0; left: 0; right: 0; }
-.js #footer .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(ease); padding-top: 40px; -webkit-overflow-scrolling: touch; }
+.js #footer .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); padding-top: 40px; -webkit-overflow-scrolling: touch; }
 .js #footer .main-menu > ul.open { left: 0; }
 .js #footer .main-menu > ul ul { position: absolute; left: -9999em; }
 .js #footer .main-menu > ul ul.open { position: relative; left: auto; }
@@ -37,10 +37,19 @@
 #footer .main-menu ul li .menu-toggle.closed { border-top-color: $very-dark-gray; }
 #footer .main-menu ul li .menu-toggle.open { margin-top: 0.2em; border-bottom-color: $very-dark-gray; }
 
+@media screen and (max-width: 767px) {
+	.js #footer-inner.fixed nav { position: fixed; background: $very-light-orange; height: 50px; z-index: 40; }
+	.js body.menu-open #footer-inner.fixed nav { z-index: 60; }
+}
+
 // iPad in portrait mode or larger
 @media screen and (min-width: 768px) {
 	
 	#navigation-wrapper { display: block; }
+	#navigation-wrapper.fixed { position: fixed; z-index: 20; top: 0; left: 0; right: 0; padding: 15px 0; @include transition-property(padding); @include transition-duration(0.15s); }
+	#navigation { @include transition-property(padding); @include transition-duration(0.15s); }
+	#navigation-wrapper.fixed #navigation { padding-right: 135px; }
+	body.navigation-wrapper-fixed { padding-top: 165px; }
 
 	.js #footer nav { position: relative; top: auto; left: auto; right: auto; }
 	#footer .navigation-header { position: absolute; left: -999em; }

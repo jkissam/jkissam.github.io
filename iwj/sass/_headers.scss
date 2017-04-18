@@ -40,17 +40,32 @@
 	.js #header.email-open .email-signup { z-index: 5; }
 	.js #header.email-open .email-signup form { left: 0px; }
 	/* .js #header.email-open .links-social { width: 0; margin: 0; } */
+	
+	.js body.footer-inner-fixed #header .links-social { position: fixed; z-index: 50; }
+	.js body.footer-inner-fixed #header .email-signup { position: fixed; z-index: 45; }
+	.js body.footer-inner-fixed #header.email-open .email-signup { z-index: 55; }
+	body.footer-inner-fixed #header #logo { position: fixed; top: 7px; left: 80px; width: 60px; z-index: 50; }
 }
 
 @media screen and (min-width: 768px) {
-	// #header-wrapper { background: $very-light-orange url(../images/background-header.jpg) no-repeat top center; }
+	// #header-wrapper { position: fixed; top: 0; left: 0; right: 0; }
 	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; background: $very-light-orange url(../images/background-header-inner.jpg) no-repeat 225px 0px; }
-	#header #logo { position: absolute; left: 20px; top: 20px; }
+	#header #logo { position: absolute; left: 20px; top: 20px; @include transition-property(width, height, top); @include transition-duration(0.15s); /* background: transparent url(../images/logo.png) no-repeat top left; background-size: 100%; */ width: 250px; height: 137px; }
+	#header #logo img { @include transition-property(width, height, top); @include transition-duration(0.15s); }
 	#header .site-name { margin-bottom: 0; }
 	#header .site-slogan { margin-bottom: 0; }
 	#header nav.secondary { position: relative; left: auto; float: right; margin-bottom: 10px; }
 	#header .links-social, .email-signup { position: relative; top: auto; right: auto; float: right; }
 	#header .links-social { clear: right; }
+	
+	body.navigation-wrapper-fixed #header-wrapper { position: fixed; top: 0; left: 0; right: 0; height: 0; background: transparent; z-index: 25; }
+	body.navigation-wrapper-fixed #header { background: transparent; height: 0; padding-top: 0; padding-bottom: 0; }
+	body.navigation-wrapper-fixed #header #logo { top: 10px; width: 60px; height: 33px; }
+	body.navigation-wrapper-fixed #header #logo img { width: 60px; }
+	body.navigation-wrapper-fixed #header .secondary { display: none; }
+	body.navigation-wrapper-fixed #header .links-social { position: absolute; top: 13px; right: 20px; border-left: 1px solid $light-orange; }
+	body.navigation-wrapper-fixed #header .links-social .fa { color: $light-orange; }
+	body.navigation-wrapper-fixed #header .email-signup { display: none; }
 }
 
 @media screen and (min-width: 1200px) {

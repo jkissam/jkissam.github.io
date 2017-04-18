@@ -167,24 +167,26 @@ uwfUtil = {
 		});
 		jQuery('.navigation-header').click(function(){
 			jQuery(this).siblings('.main-menu').children('ul').toggleClass('open');
+			jQuery('body').toggleClass('menu-open');
 			if (jQuery(window).width() < uwfOptions.mobileBreakPoint) { uwfUtil.closeReveal(); }
 		});
-		jQuery('.menu-dismiss').click(function(){ jQuery(this).parent('.main-menu ul').toggleClass('open'); });
+		jQuery('.menu-dismiss').click(function(){ jQuery(this).parent('.main-menu ul').toggleClass('open'); jQuery('body').toggleClass('menu-open'); });
 
 		var menuHammer = new Hammer(jQuery('#footer .main-menu > ul')[0]);
 		menuHammer.on('swipeleft', function(event){
-			if (jQuery(window).width() < uwfOptions.mobileBreakPoint) { jQuery('#footer .main-menu > ul').removeClass('open'); }
+			if (jQuery(window).width() < uwfOptions.mobileBreakPoint) { jQuery('#footer .main-menu > ul').removeClass('open'); jQuery('body').removeClass('menu-open'); }
 		});
 
 		jQuery('#site-wrapper').click(function(event){
 			var $target = jQuery(event.target);
 			if ( !$target.hasClass('navigation-header') && !$target.closest('.navigation-header').length && !$target.hasClass('main-menu') && !$target.closest('.main-menu').length && (jQuery(window).width() < uwfOptions.mobileBreakPoint) ) {
 				jQuery('#footer .main-menu > ul').removeClass('open');
+				jQuery('body').removeClass('menu-open');
 			}
 		});
 
 		jQuery(document).keyup(function(event){
-			if ( (event.keyCode == 27) && (jQuery(window).width() < uwfOptions.mobileBreakPoint) ) { jQuery('#footer .main-menu > ul').removeClass('open'); }
+			if ( (event.keyCode == 27) && (jQuery(window).width() < uwfOptions.mobileBreakPoint) ) { jQuery('#footer .main-menu > ul').removeClass('open'); jQuery('body').removeClass('menu-open'); }
 		});
 	},
 
@@ -558,6 +560,8 @@ jQuery(document).ready(function($){
 	uwfUtil.init();
 	uwfUtil.equalizeHeight( '#blog-view-front h3' );
 	uwfUtil.equalizeHeight( '#front-secondary h2' );
+	uwfUtil.fixOnScroll( '#navigation-wrapper', 105 );
+	uwfUtil.fixOnScroll( '#footer-inner', 94 );
 	
 	// social icons opening email signup on mobile
 	$('#header .links-social .email').click( function() { jQuery('#header').addClass('email-open'); } );
