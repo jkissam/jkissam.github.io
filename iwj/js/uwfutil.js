@@ -562,6 +562,42 @@ jQuery(document).ready(function($){
 	// social icons opening email signup on mobile
 	$('#header .links-social .email').click( function() { jQuery('#header').addClass('email-open'); } );
 	$('#header .email-signup .dismiss').click( function() { jQuery('#header').removeClass('email-open'); } );
+	
+	// meta icons on mobile
+	$('.meta-item .fa').click(function(){
+		var $item = $(this).parent();
+		if (!$item.hasClass('meta-active')) {
+			$('.meta-active').removeClass('meta-active');
+			$item.addClass('meta-active');
+		}
+	});
+	
+	// deal with images and photo credits in posts
+	var numberOfImages = 0;
+	var amountOfText = 0;
+	var hero = $('#hero .hero-image-container img').length > 0;
+	var heroCredit = hero;
+	$('#content p').each(function(){
+		numberOfImages = $(this).find('img').length;
+		amountOfText = $(this).text().length;
+		if ( (numberOfImages == 1) && !amountOfText ) {
+			$(this).addClass('image-container');
+			if (!hero) {
+				$(this).addClass('hero-image');
+				heroImageSrc = $(this).find('img').attr('src');
+				$('#hero .hero-image-container').append('<img src="'+heroImageSrc+'" />');
+				hero = true;
+			}
+		}
+		if ( $(this).text().toLowerCase().indexOf('photo credit') > -1 ) {
+			$(this).addClass('image-credit');
+			if (hero && !heroCredit) {
+				$(this).addClass('hero-image-credit');
+				$('#hero .hero-image-credit').text($(this).text());
+				heroCredit = true;
+			}
+		}
+	});
 });
 
 /**

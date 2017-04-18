@@ -1,7 +1,6 @@
 // content
 
-#main-wrapper { padding: 20px 0; }
-.front #main-wrapper { padding-top: 0; }
+#main-wrapper { padding: 0 0 20px; }
 .front #hero { padding: 0; }
 .front #hero img { display: block; }
 .front #quotations blockquote { margin: 20px 0; font-size: 1.3334em; }
@@ -20,14 +19,35 @@
 
 #front-secondary-wrapper { padding: 20px 0; }
 
-.hero-image-credit { margin: 0.6667em 0; font-style: italic; text-align: center; }
-
-.prevnext { margin-bottom: 1em; }
-.prev { float: left; }
-.next { float: right; }
+.not-front #hero { display: none; }
 
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
+
+.prevnext { font-size: 0.8em; margin: 1em 0; }
+.prev { float: left; }
+.next { float: right; }
+
+.meta { margin-bottom: 1em; }
+.meta-item { display: block; float: left; width: 25%; text-align: center; }
+.meta-item .fa { font-size: 2em; margin-bottom: 0.16667em; }
+.meta-active .fa { color: $dark-orange; }
+.meta-item-content { display: none; width: 400%; }
+.meta-active .meta-item-content { display: block; text-align: left; }
+.meta-item.comments .meta-item-content { margin-left: -100%; }
+.meta-item.author .meta-item-content { margin-left: -200%; }
+.meta-item.categories .meta-item-content { margin-left: -300%; }
+
+#content p.image-container { margin-left: -20px; margin-right: -20px; }
+#content p.image-container img { border: none !important; }
+
+#comments { margin-top: 20px; border-top: 1px solid $light-gray; padding-top: 20px; }
+#comments h2 { color: $green; }
+#comment-disclaimer { color: $medium-gray; }
+#comments ol { list-style: none outside none; margin: 2em 0; }
+#comments ol li { margin: 0 0 2em; border-bottom: 1px solid $light-green; padding: 0 0 2em; }
+#comment-form fieldset { border: none; padding: 0; }
+#comment-form label { display: block; margin-top: 1em; }
 
 @media screen and (max-width: 767px) {
 	#blog-view-front h3, #front-secondary h2 { padding-top: 20px; border-top: 1px solid $yellow; margin-top: 20px; }
@@ -37,7 +57,9 @@
 // iPad in portrait mode or larger
 @media screen and (min-width: 768px) {
 
+	#main-wrapper { padding: 50px 0 40px; }
 	.front #main-wrapper { padding: 40px 0; }
+	
 	.front #hero { padding-left: 20px; padding-right: 20px; }
 	.front #quotations blockquote { margin-top: 0; font-size: 1.43334em; }
 	
@@ -50,8 +72,26 @@
 
 	#front-secondary-wrapper { padding: 40px 0; }
 	
-	.hero-image-container { overflow: hidden; height: 0; padding-bottom: 100%; }
+	.not-front #hero { display: block; }
+	.hero-image-container { overflow: hidden; height: 0; padding-bottom: 100%; margin-left: 0; margin-right: 0; }
 	.hero-image-container img { max-width: 160%; margin-left: -30%; }
+	.hero-image-credit { font-size: 0.8em; text-align: center; font-style: italic; margin: 0.5em 0; }
+	
+	#content .hero-image, #content .hero-image-credit { display: none; }
+	
+	.prevnext { position: absolute; top: -35px; left: 20px; right: 20px; margin: 0; }
+
+	.meta { border-top: 1px solid $light-gray; border-bottom: 1px solid $light-gray; }
+	.meta-item { width: auto; font-size: 0.8em; margin: 0.5em 1em 0.5em 0; text-align: left; }
+	.meta-item .fa { font-size: 1em; margin-bottom: 0; margin-right: 0.25em; }
+	.meta-active .fa { color: $base-text; }
+	.meta-item-content { display: inline; width: auto; }
+	.meta-active .meta-item-content { display: inline; }
+	.meta-item.comments .meta-item-content,
+	.meta-item.author .meta-item-content,
+	.meta-item.categories .meta-item-content { margin-left: 0; }
+	
+	#content p.image-container img { border: 1 px solid $base-text !important; }
 }
 
 @media screen and (min-width: 992px) {
@@ -66,4 +106,6 @@
 	.front #quotations blockquote { font-size: 2.73334em; }
 	#front-issues .issue-image { margin: 0 25%; }
 	#front-issues p { font-size: 2em; margin-top: 0.3334em; line-height: 1em; }
+	
+	#content p, #content ul, #content ol, #comments { max-width: 560px; }
 }
