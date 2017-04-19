@@ -1,7 +1,7 @@
 // header
 
 #header-wrapper { background: $very-light-orange; }
-#header { padding-top: 80px; height: 225px; border-bottom: 60px solid $burgundy; }
+#header { padding-top: 80px; height: 225px; border-bottom: 60px solid $burgundy; background: $very-light-orange url(../images/background-header-inner.jpg) no-repeat bottom center; }
 .js #header { padding-top: 50px; height: 200px; }
 #header #logo { display: block; z-index: 20; }
 #header #logo img { display: block; margin: 0 auto; width: 250px; }
@@ -46,7 +46,7 @@
 
 @media screen and (min-width: 768px) {
 	// #header-wrapper { position: fixed; top: 0; left: 0; right: 0; }
-	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; background: $very-light-orange url(../images/background-header-inner.jpg) no-repeat 225px 0px; }
+	#header, .js #header { padding-top: 20px; padding-bottom: 20px; height: 105px; border-bottom: none; position: relative; background-position: 225px 0px; }
 	#header #logo { position: absolute; left: 20px; top: 20px; @include transition-property(width, height, top); @include transition-duration(0.15s); /* background: transparent url(../images/logo.png) no-repeat top left; background-size: 100%; */ width: 250px; height: 137px; }
 	#header #logo img { @include transition-property(width, height, top); @include transition-duration(0.15s); }
 	#header .site-name { margin-bottom: 0; }
