@@ -73,3 +73,11 @@
 	#footer .main-menu ul li .menu-toggle.open { margin-top: 0.6em; }
 	
 }
+
+@media screen and (min-width: 992px) {
+	#navigation ul.main-menu li { margin-left: 0.6em; }
+}
+
+@media screen and (min-width: 1200px) {
+	#navigation ul.main-menu li { margin-left: 1em; }
+}
