@@ -61,7 +61,7 @@
 	.front #main-wrapper { padding: 40px 0; }
 	
 	.front #hero { padding-left: 20px; padding-right: 20px; }
-	.front #quotations blockquote { margin-top: 0; font-size: 1.43334em; }
+	.front #quotations blockquote { margin-top: 0; font-size: 1.3334em; }
 	
 	#blog-view-front h2, #front-issues h2 { font-size: 2em; }
 	
@@ -95,7 +95,7 @@
 }
 
 @media screen and (min-width: 992px) {
-	.front #quotations blockquote { font-size: 2em; }
+	.front #quotations blockquote { font-size: 1.6em; }
 	#front-issues-wrapper { padding-bottom: 0; }
 	#front-issues .issue-image { margin: 0 20%; }
 	#front-issues li { margin-bottom: 40px; }
@@ -105,7 +105,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.front #quotations blockquote { font-size: 2.73334em; }
+	.front #quotations blockquote { font-size: 2.3334em; }
 	#front-issues .issue-image { margin: 0 25%; }
 	#front-issues p { font-size: 2em; margin-top: 0.3334em; line-height: 1em; }
 	
