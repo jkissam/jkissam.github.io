@@ -81,8 +81,8 @@
 	
 	.prevnext { position: absolute; top: -35px; left: 20px; right: 20px; margin: 0; }
 
-	.meta { border-top: 1px solid $light-gray; border-bottom: 1px solid $light-gray; }
-	.meta-item { width: auto; font-size: 0.8em; margin: 0.5em 1em 0.5em 0; text-align: left; }
+	.meta { font-size: 0.8em; line-height: 1em; border-top: 1px solid $light-gray; border-bottom: 1px solid $light-gray; padding: 0.5em 0; }
+	.meta-item { width: auto; margin: 0.5em 1em 0.5em 0; text-align: left; }
 	.meta-item .fa { font-size: 1em; margin-bottom: 0; margin-right: 0.25em; }
 	.meta-active .fa { color: $base-text; }
 	.meta-item-content { display: inline; width: auto; }
