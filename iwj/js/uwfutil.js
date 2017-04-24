@@ -510,7 +510,7 @@ uwfUtil = {
 	// 2.3.6 sets vertical height of all matched elements to the same height (the maximum)
 	// provided the window is at least minWidth (defaults to not doing this on anything narrower than an iPad)
 	equalizeHeight : function(sel, minWidth) {
-		if (!minWidth) { minWidth = 768; }
+		if (minWidth == null) { minWidth = 768; }
 		var h = 0;
 		jQuery(sel).css('height','auto').removeClass('fixed-height');
 		if (jQuery(window).width() < minWidth) { return; }
@@ -610,6 +610,7 @@ jQuery(document).ready(function($){
 jQuery(window).load(function(){
 	if (uwfOptions.fixFooter) { uwfUtil.fixFooter(); }
 	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }
+	uwfUtil.equalizeHeight( '.social-shares a', 0 );
 });
 
 /**
@@ -627,6 +628,7 @@ jQuery(document).ajaxComplete(function() {
 jQuery(window).smartresize(function(){
 	uwfUtil.equalizeHeight( '#blog-view-front h3' );
 	uwfUtil.equalizeHeight( '#front-secondary h2' );
+	uwfUtil.equalizeHeight( '.social-shares a', 0 );
 	if (uwfOptions.fixFooter) { uwfUtil.fixFooter(); }
 	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }
 });

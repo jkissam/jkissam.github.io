@@ -54,16 +54,16 @@
 #comment-form fieldset { border: none; padding: 0; }
 #comment-form label { display: block; margin-top: 1em; }
 
-.social-shares { margin-top: 20px; margin-bottom: 20px; max-width: 560px; }
+.social-shares { margin-top: 20px; margin-bottom: 20px; max-width: 420px; }
 .social-shares .row { margin-left: -5px; margin-right: -5px; }
 .social-shares .col-xs-4 { padding-left: 5px; padding-right: 5px; }
 a.share { text-align: center; padding-top: 1em; padding-bottom: 1em; }
 a.share-facebook { background: $facebook-blue; border-color: $facebook-blue; }
 a.share-twitter { background: $twitter-aqua; border-color: $twitter-aqua; }
-a.share i.fa { font-size: 4em; margin: 0; color: #fff; }
+a.share i.fa { font-size: 2em; margin: 0; color: #fff; }
 a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 
-.email-signup-blog { margin: 20px 0; max-width: 560px; }
+.email-signup-blog { margin: 20px 0; }
 .email-signup-blog h2 { color: $green; }
 .email-signup-blog input { border-color: $green; }
 .email-signup-blog input[type="submit"] { font-family: $header; text-transform: uppercase; background: $green; border-color: $green; }
@@ -113,9 +113,11 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 	
 	#content p.image-container img { border: 1 px solid $base-text !important; }
 	
-	.social-shares .row { margin-left: -10px; margin-right: -10px; }
-	.social-shares .col-xs-4 { padding-left: 10px; padding-right: 10px; }
+	// .social-shares .row { margin-left: -10px; margin-right: -10px; }
+	// .social-shares .col-xs-4 { padding-left: 10px; padding-right: 10px; }
+	a.share i.fa { font-size: 3em; }
 	a.share span { font-size: 0.8em; }
+	.email-signup-blog { margin: 40px 0; }
 }
 
 @media screen and (min-width: 992px) {
