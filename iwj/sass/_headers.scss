@@ -27,7 +27,7 @@
 .email-signup { position: absolute; top: 45px; right: 20px; }
 .email-signup form { display: block; width: 220px; text-align: right; }
 .email-signup input { padding: 2px; width: 140px; }
-.email-signup input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; }
+.email-signup input[type="submit"] { width: 30px; margin: 0; background: $dark-orange; border-color: $dark-orange; }
 .email-signup .dismiss { display: none; font-size: 2.6em; width: 0.75em; position: relative; top: 0.2em; }
 
 @media screen and (max-width: 767px) {

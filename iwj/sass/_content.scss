@@ -46,13 +46,27 @@
 #content p.image-container { margin-left: -20px; margin-right: -20px; }
 #content p.image-container img { border: none !important; }
 
-#comments { margin-top: 20px; border-top: 1px solid $light-gray; padding-top: 20px; }
+#comments { display: none; margin-top: 20px; border-top: 1px solid $light-gray; padding-top: 20px; }
 #comments h2 { color: $green; }
 #comment-disclaimer { color: $medium-gray; }
 #comments ol { list-style: none outside none; margin: 2em 0; }
 #comments ol li { margin: 0 0 2em; border-bottom: 1px solid $light-green; padding: 0 0 2em; }
 #comment-form fieldset { border: none; padding: 0; }
 #comment-form label { display: block; margin-top: 1em; }
+
+.social-shares { margin-top: 20px; margin-bottom: 20px; max-width: 560px; }
+.social-shares .row { margin-left: -5px; margin-right: -5px; }
+.social-shares .col-xs-4 { padding-left: 5px; padding-right: 5px; }
+a.share { text-align: center; padding-top: 1em; padding-bottom: 1em; }
+a.share-facebook { background: $facebook-blue; border-color: $facebook-blue; }
+a.share-twitter { background: $twitter-aqua; border-color: $twitter-aqua; }
+a.share i.fa { font-size: 4em; margin: 0; color: #fff; }
+a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
+
+.email-signup-blog { margin: 20px 0; max-width: 560px; }
+.email-signup-blog h2 { color: $green; }
+.email-signup-blog input { border-color: $green; }
+.email-signup-blog input[type="submit"] { font-family: $header; text-transform: uppercase; background: $green; border-color: $green; }
 
 @media screen and (max-width: 767px) {
 	#blog-view-front h3, #front-secondary h2 { padding-top: 20px; border-top: 1px solid $yellow; margin-top: 20px; }
@@ -98,6 +112,10 @@
 	.meta-item.categories .meta-item-content { margin-left: 0; }
 	
 	#content p.image-container img { border: 1 px solid $base-text !important; }
+	
+	.social-shares .row { margin-left: -10px; margin-right: -10px; }
+	.social-shares .col-xs-4 { padding-left: 10px; padding-right: 10px; }
+	a.share span { font-size: 0.8em; }
 }
 
 @media screen and (min-width: 992px) {

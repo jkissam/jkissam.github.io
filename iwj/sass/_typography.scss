@@ -68,14 +68,15 @@ input[type="submit"], button, a.button {
   background: $burgundy;
   @include border-radius(0);
   color: #fff;
-  padding: 0.4em 1em;
+  padding: 0.6667em 1em;
   margin-right: 1em;
-  border: none;
+  border: 1px solid $burgundy;
   font-size: 1em;
   cursor: pointer;
 }
 .no-touch input[type="submit"]:hover, .no-touch button:hover, .no-touch a.button:hover {
   background: $dark-orange; color: #fff;
+  border-color: $dark-orange;
 }
 input[type="submit"].button-block,
 button.button-block,
@@ -83,10 +84,10 @@ a.button.button-block { display: block; margin: 0 0 1em; }
 
 .button .fa { color: $yellow; margin-left: 0.25em; }
 
-input[type="submit"].button-cta, button.button-cta, a.button.button-cta { background: $dark-orange; }
+input[type="submit"].button-cta, button.button-cta, a.button.button-cta { background: $dark-orange; border-color: $dark-orange; }
 .no-touch input[type="submit"].button-cta:hover,
 .no-touch button.button-cta:hover,
-.no-touch a.button.button-cta:hover { background: $light-orange; }
+.no-touch a.button.button-cta:hover { background: $light-orange; border-color: $light-orange; }
 
 .button-cta .fa { color: $burgundy; }
 
