@@ -49,6 +49,9 @@
 	#navigation { @include transition-property(padding); @include transition-duration(0.15s); }
 	#navigation-wrapper.fixed #navigation { padding-right: 135px; }
 	body.navigation-wrapper-fixed { padding-top: 165px; }
+	
+	#navigation ul.main-menu li:last-child a { padding: 8px 20px 4px; margin-top: -8px; margin-bottom: -4px;  background: $yellow; color: $burgundy; @include border-radius(4px); margin-left: 1em; }
+	.no-touch #navigation ul.main-menu li:last-child a:hover { background: $light-orange; color: $burgundy; }
 
 	.js #footer nav { position: relative; top: auto; left: auto; right: auto; }
 	#footer .navigation-header { position: absolute; left: -999em; }

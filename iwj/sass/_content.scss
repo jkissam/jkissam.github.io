@@ -3,8 +3,12 @@
 #main-wrapper { padding: 0 0 20px; }
 .front #hero { padding: 0; }
 .front #hero img { display: block; }
-.front #quotations blockquote { margin: 20px 0; font-size: 1.3334em; }
-.front #quotations blockquote p { margin-bottom: 0; }
+.front #quotations { margin: 20px 0; font-size: 1.3334em; }
+// .front #quotations p { margin-bottom: 0; }
+.front #quotation-links a { color: $medium-gray; }
+.no-touch .front #quotation-links a:hover { color: $light-orange; }
+.front #quotation-links a.button { color: #fff; text-align: center; font-family: $header; font-size: 2em; line-height: 1.1em; padding-top: 0.5em; padding-bottom: 0.5em; text-transform: uppercase; }
+.no-touch .front #quotation-links a.button:hover { color: #fff; }
 
 #blog-view-front { padding-bottom: 20px; }
 #blog-view-front h2 { text-transform: uppercase; }
@@ -61,7 +65,7 @@
 	.front #main-wrapper { padding: 40px 0; }
 	
 	.front #hero { padding-left: 20px; padding-right: 20px; }
-	.front #quotations blockquote { margin-top: 0; font-size: 1.3334em; }
+	.front #quotations { margin-top: 0; font-size: 1.3334em; }
 	
 	#blog-view-front h2, #front-issues h2 { font-size: 2em; }
 	
@@ -95,7 +99,8 @@
 }
 
 @media screen and (min-width: 992px) {
-	.front #quotations blockquote { font-size: 1.6em; }
+	.front #quotations { font-size: 1.6em; }
+	
 	#front-issues-wrapper { padding-bottom: 0; }
 	#front-issues .issue-image { margin: 0 20%; }
 	#front-issues li { margin-bottom: 40px; }
@@ -105,7 +110,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.front #quotations blockquote { font-size: 2.3334em; }
+	.front #quotations { font-size: 2.3334em; }
+	
 	#front-issues .issue-image { margin: 0 25%; }
 	#front-issues p { font-size: 2em; margin-top: 0.3334em; line-height: 1em; }
 	
