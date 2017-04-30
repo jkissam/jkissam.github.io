@@ -561,7 +561,7 @@ jQuery(document).ready(function($){
 	uwfUtil.equalizeHeight( '#blog-view-front h3' );
 	uwfUtil.equalizeHeight( '#front-secondary h2' );
 	uwfUtil.fixOnScroll( '#navigation-wrapper', 105 );
-	uwfUtil.fixOnScroll( '#logo', 94 );
+	// uwfUtil.fixOnScroll( '#logo', 94 );
 	
 	// social icons opening email signup on mobile
 	$('#header .links-social .email').click( function() { jQuery('#header').addClass('email-open'); } );

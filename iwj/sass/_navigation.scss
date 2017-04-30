@@ -1,6 +1,7 @@
 // navigation
 
 .navigation-header { cursor: pointer; margin: 10px 0 0; float: left; }
+.navigation-header i.fa { margin-right: 0.4em; }
 .navigation-header span { position: absolute; left: -999em; }
 
 #navigation-wrapper { display: none; padding: 20px 0; background: $burgundy; color: $yellow; }
@@ -11,6 +12,8 @@
 #navigation ul.main-menu li a { display: block; padding: 0 0 0 1em; font: 1.3334em/1em $header; text-transform: uppercase; }
 
 // footer navigation styles are here because we're using the footer menu as the mobile menu
+
+#footer .navigation-header a { color: $burgundy; }
 
 #footer .main-menu > ul { background: $burgundy; font-size: 1.3334em; z-index: 500; }
 
