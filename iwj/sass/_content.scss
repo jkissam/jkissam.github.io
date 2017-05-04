@@ -88,11 +88,11 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 	.front #hero { padding-left: 20px; padding-right: 20px; }
 	.front #quotations { margin-top: 0; font-size: 1.3334em; }
 	
-	#front-cta-wrapper { padding-bottom: 50px; }
-	#front-cta:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 50px; }
+	#front-cta-wrapper { padding: 50px 0; background: $smoke; }
+	// #front-cta:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 50px; }
 	#front-cta .button-cta { font-size: 1.3334em; text-align: left; display: inline-block; }
 	
-	#blog-view-front h2 { padding-top: 40px; }
+	#blog-view-front h2 { padding-top: 40px; border-top: none; }
 	#blog-view-front h2, #front-issues h2 { font-size: 2em; }
 	
 	#front-issues-wrapper { padding-top: 40px; }
