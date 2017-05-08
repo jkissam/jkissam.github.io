@@ -11,11 +11,14 @@
 .front #quotation-links a.button { color: #fff; text-align: center; font-family: $header; font-size: 2em; line-height: 1.1em; padding-top: 0.5em; padding-bottom: 0.5em; text-transform: uppercase; }
 .no-touch .front #quotation-links a.button:hover { color: #fff; }
 
-#front-cta-wrapper { padding: 20px 0 30px; }
-#front-cta h2 { text-transform: uppercase; }
+#front-cta-wrapper { padding: 10px 0 30px; }
+#front-cta:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 30px; }
+#front-cta h2 { text-transform: uppercase; margin-bottom: 0.5em; }
+#front-cta .section-content { margin-bottom: 20px; }
 #front-cta .button-cta { font-family: $header; text-transform: uppercase; font-size: 1.6em; text-align: center; margin-bottom: 0; }
 
 #blog-view-front { padding-bottom: 20px; }
+#blog-view-front:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 20px; }
 #blog-view-front h2 { text-transform: uppercase; border-top: 1px solid $yellow; padding-top: 30px; }
 
 #front-issues-wrapper { background: $very-light-orange; padding: 20px 0 10px; }
@@ -88,12 +91,11 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 	.front #hero { padding-left: 20px; padding-right: 20px; }
 	.front #quotations { margin-top: 0; font-size: 1.3334em; }
 	
-	#front-cta-wrapper { padding: 50px 0; background: $smoke; }
-	// #front-cta:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 50px; }
-	#front-cta .button-cta { font-size: 1.3334em; text-align: left; display: inline-block; }
+	#front-cta-wrapper { padding: 0 0 30px; }
+	#front-cta .section-content { margin-bottom: 0; }
+	// #front-cta .button-cta { font-size: 1.3334em; text-align: left; display: inline-block; }
 	
-	#blog-view-front h2 { padding-top: 40px; border-top: none; }
-	#blog-view-front h2, #front-issues h2 { font-size: 2em; }
+	#blog-view-front:before { margin-bottom: 40px; }
 	
 	#front-issues-wrapper { padding-top: 40px; }
 	#front-issues .issue-image { margin: 0 15%; }
@@ -134,7 +136,6 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 	.front #quotations { font-size: 1.6em; margin-bottom: 1em; }
 	
 	#front-cta h2 { font-size: 2em; }
-	#front-cta .button-cta { font-size: 1.6em; }
 	
 	#front-issues-wrapper { padding-bottom: 0; }
 	#front-issues .issue-image { margin: 0 20%; }
