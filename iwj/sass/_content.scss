@@ -5,7 +5,7 @@
 .front #hero { padding: 0; }
 .front #hero img { display: block; }
 .front #quotations { margin: 20px 0; font-size: 1.3334em; }
-.front #quotation-links p { margin-bottom: 1em; }
+.front #quotation-links p { margin-bottom: 1em; text-align: center; }
 .front #quotation-links a { color: $medium-gray; }
 .no-touch .front #quotation-links a:hover { color: $light-orange; }
 .front #quotation-links a.button { color: #fff; text-align: center; font-family: $header; font-size: 2em; line-height: 1.1em; padding-top: 0.5em; padding-bottom: 0.5em; text-transform: uppercase; }
@@ -151,7 +151,7 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 
 @media screen and (min-width: 1200px) {
 	.front #quotations { font-size: 2.3334em; margin-bottom: 1em; }
-	.front #quotation-links { font-size: 1.3334em; line-height: 1.5em; }
+	.front #quotation-links { font-size: 1.6667em; line-height: 1.5em; }
 	
 	#front-cta h2 { font-size: 2.4em; }
 	
