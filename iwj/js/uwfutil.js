@@ -558,6 +558,7 @@ uwfUtil = {
  */
 jQuery(document).ready(function($){
 	uwfUtil.init();
+	uwfUtil.populateInputs( '.populate' );
 	uwfUtil.equalizeHeight( '#blog-view-front h3' );
 	uwfUtil.equalizeHeight( '#front-secondary h2' );
 	uwfUtil.fixOnScroll( '#navigation-wrapper', 105 );
