@@ -13,7 +13,7 @@
 
 // #front-cta-wrapper { padding: 0; }
 // #front-cta:before { content: ''; display: block; height: 0; border-top: 1px solid $yellow; margin-bottom: 30px; }
-#front-cta-inner { background: $yellow; padding: 20px 0 19px; }
+#front-cta-inner { background: $yellow; padding: 20px 0; margin-bottom: -1px; }
 #front-cta h2 { text-transform: uppercase; margin-bottom: 0.5em; text-align: center; }
 #front-cta .section-content { margin-bottom: 20px; }
 #front-cta input { border-color: #fff; }
@@ -95,7 +95,7 @@ a.share span { display: block; font-size: 0.6667em; line-height: 1.2em; }
 	.front #quotations { margin-top: 0; font-size: 1.3334em; }
 	
 	// #front-cta-wrapper { padding: 0; }
-	#front-cta-inner { margin-left: 0; margin-right: 0; padding: 40px 20px 39px; }
+	#front-cta-inner { margin: 0; padding: 40px 20px 39px; }
 	#front-cta .section-content { margin-bottom: 0; }
 	// #front-cta .button-cta { max-width: 300px; margin-left: auto; margin-right: auto; }
 	
