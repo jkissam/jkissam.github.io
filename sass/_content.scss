@@ -3,10 +3,10 @@
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
 
-.hero { color: $dark-blue; font-weight: bold; font-size: 5em; line-height: 1em; margin: 0 0 0.2em; }
+.hero { color: $dark-blue; font-weight: bold; font-size: 5em; line-height: 1em; margin: 0 0 0.16667em; }
 .hero img { margin-left: 10%; max-width: 40%; }
 
-.cta-container { font-size: 1.6em; line-height: 1.25em; text-align: center; }
+.cta-container { font-size: 1.3334em; line-height: 1.25em; text-align: center; }
 
 .nav-primary { margin-bottom: 20px; }
 .nav-primary h2 { font-size: 1em; font-family: $sans-serif; text-align: center; margin: 0 0 0.3334em; }
@@ -68,10 +68,10 @@ a.content-section-next { float: right; margin: 0; }
 
 // mobile only
 @media screen and (max-width: 767px) {
-	.cta-container p { margin-bottom: 0.5em; }
+	.cta-container p { margin: 0 1em 0.5em; }
 	#Field4 { height: 39px; display: block; line-height: normal; }
 	.cta-container a.button-cta { font-size: 0.6667em; }
-	.js .content-section .content { font-size: 0.86667em; }
+	.js .content-section .content { font-size: 0.86667em; line-height: 1.3846em; }
 }
 
 @media screen and (min-width: 360px) {
@@ -87,6 +87,8 @@ a.content-section-next { float: right; margin: 0; }
 
 	.hero { font-size: 10em; max-width: 500px; margin: 0 auto 0.1em; }
 	.hero img { margin-left: 0; max-width: 50%; }
+	
+	.cta-container { font-size: 1.6em; line-height: 1.25em; }
 	
 	.nav-primary ul.row { margin-left: -10px; margin-right: -10px; }
 	.nav-primary ul.row li.col-xs-4 { padding-left: 10px; padding-right: 10px; }
