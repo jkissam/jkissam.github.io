@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 410" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse cx="176.665" cy="251.584" rx="150.878" ry="150.878" style="fill: rgb(242, 95, 112);" transform="matrix(0.899936, -0.436022, 0.436022, 0.899936, -116.886534, 107.839074)"/>
+  <ellipse cx="251.584" cy="294.246" rx="60.352" ry="45.784" style="fill: rgb(255, 255, 255);" transform="matrix(0.899936, -0.436022, 0.436022, 0.899936, -116.886902, 107.839199)"/>
+  <ellipse transform="matrix(0.899936, -0.436023, 0.436022, 0.899936, -255.575449, 158.59483)" cx="389.679" cy="215.911" rx="13.007" ry="44.223" style="fill: rgb(255, 255, 255);"/>
+  <ellipse transform="matrix(0.899937, -0.436023, 0.436022, 0.899936, -255.57479, 158.595423)" cx="362.625" cy="227.877" rx="11.966" ry="37.459" style="fill: rgb(255, 255, 255);"/>
+  <ellipse transform="matrix(0.899938, -0.436024, 0.436022, 0.899936, -206.83513, 131.511708)" cx="362.623" cy="227.877" rx="11.966" ry="37.459" style="fill: rgb(255, 255, 255);"/>
+  <ellipse cx="296.846" cy="226.09" rx="10.406" ry="31.737" style="fill: rgb(255, 255, 255);" transform="matrix(0.899934, -0.43602, 0.436021, 0.899937, -116.886859, 107.838583)"/>
+  <ellipse cx="189.671" cy="246.902" rx="12.487" ry="28.614" style="fill: rgb(255, 255, 255);" transform="matrix(0.899936, -0.43602, 0.436022, 0.899936, -116.886358, 107.838929)"/>
+  <path d="M 237.525 396.26 L 372.165 558.267 L 102.885 558.267 L 237.525 396.26 Z" transform="matrix(0.999228, -0.039287, -0.451428, 1.018522, 237.574231, -265.279355)" style="fill: rgb(14, 30, 87); opacity: 0.8;" bx:shape="triangle 102.885 396.26 269.28 162.007 0.5 0 1@2dd6a5ee"/>
+  <path d="M 306.206 99.942 C 353.358 128.834 407.115 230.611 387.366 310.131" style="fill: none; stroke: rgb(242, 95, 112); stroke-linecap: round; stroke-width: 20;"/>
+  <path d="M 329.109 53.117 C 399.998 87.615 459.152 213.904 438.588 326.779" style="fill: none; stroke: rgb(242, 95, 112); stroke-linecap: round; stroke-width: 20;"/>
+  <path d="M 355.122 10.455 C 439.61 47.903 509.098 196.483 484.425 343.428" style="fill: none; stroke: rgb(242, 95, 112); stroke-linecap: round; stroke-width: 20;"/>
+</svg>

@@ -5,9 +5,9 @@ body { color: $base-text; font: 93.75%/1.6em $sans-serif; }
 
 // 1.2 Headers
 h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0 0 1em; }
-h1 { font-size: 2em; line-height: 1.2em; }
-h2 { font-size: 1.6em; line-height: 1.25em; }
-h3 { font-size: 1.3334em; line-height: 1.2em; }
+h1 { font-family: $header; font-size: 2em; line-height: 1.2em; }
+h2 { font-family: $header; font-size: 1.6em; line-height: 1.25em; }
+h3 { font-family: $header; font-size: 1.3334em; line-height: 1.2em; }
 h4 { font-size: 1.2em; line-height: 1.3334em; font-weight: bold; }
 h5 { font-size: 1.0666em; font-weight: bold; margin-bottom: 0; }
 h6 { font-size: 1em; font-weight: bold; margin-bottom: 0; }
@@ -17,6 +17,7 @@ p { margin-bottom: 1.3334em; }
 p.leftalign { text-align: left; }
 p.centeralign { text-align: center; }
 p.rightalign { text-align: right; }
+p.read-more { text-align: right; }
 address { font-style: normal; margin-bottom: 1.3334em; }
 blockquote { margin: 0 0 0 2em; margin-bottom: 1.3334em; }
 blockquote p { margin-bottom: 0.6667em; }
@@ -35,10 +36,10 @@ nav ul ul { margin-left: 1em; }
 
 // 1.5 Links
 a { text-decoration: none; }
-a:link { color: $ws-blue; }
-a:visited { color: $ws-blue; }
-.no-touch a:hover { color: $ws-red; }
-a:active { color: $ws-blue; }
+a:link { color: $pink; }
+a:visited { color: $pink; }
+.no-touch a:hover { color: $dark-blue; }
+a:active { color: $pink; }
 
 // 1.6 Images
 img { max-width: 100%; height: auto !important; }
@@ -50,8 +51,11 @@ img { max-width: 100%; height: auto !important; }
 th, td { padding: 0.6667em; }
 
 // 1.8 Form elements
+label { display: block; }
+label.error, .req { color: $pink; }
 input, select, textarea { border: 1px solid $light-gray; color: $base-text; padding: 0.6667em; font-family: $sans-serif; width: 100%; outline: 0; }
 input:focus, select:focus, textarea:focus { border-color: $base-text; }
+input.error, textarea.error { border-color: $pink; }
 input[type="checkbox"],input[type="radio"],input[type="submit"],input[type="image"] { width: auto; }
 input[type="image"] { border: 0; outline: invert none medium; }
 input[type="search"] { -webkit-appearance: none; moz-appearance: none; }
@@ -60,27 +64,44 @@ fieldset { margin: 2em 0; border-color: $light-gray; }
 legend { font: 1.3334em $sans-serif; color: $very-dark-gray; border: 1px solid $light-gray; padding: 2px 15px; background: $very-light-gray; }
 legend + * { -webkit-margin-top-collapse: separate; }
 input[type="submit"], button, a.button {
-  background: $very-dark-gray;
-  @include border-radius(0);
-  color: #fff;
+  background: transparent;
+  @include border-radius(5px);
+  color: $base-text;
   padding: 0.4em 1em;
   margin-right: 1em;
-  border: none;
+  border: 1px solid $very-dark-gray;
   font-size: 1em;
   cursor: pointer;
 }
 .no-touch input[type="submit"]:hover, .no-touch button:hover, .no-touch a.button:hover {
-  background: $dark-gray;
+  background: $pink; border-color: $pink; color: #fff;
 }
+
+input[type="submit"].button-cta, button.button-cta, a.button.button-cta { background: $light-blue; border-color: $light-blue; color: #fff; padding: 0.5em 1em; }
+
+input[type="submit"].button-block, button.button-block, a.button.button-block { display: block; text-align: center; margin: 0 0 1em; }
+p.read-more a.button.button-block { float: right; margin: 0 0 1em 2em; }
+
 form ul { list-style: none outside none; margin: 0; }
 form ul li { margin-bottom: 1em; }
 
 // 1.9 pseudo-icons
 .dismiss:before { content: "\00d7"; cursor: pointer; }
 
+// 1.10 responsive iframe container
+.iframe-container { width: 100%; height: 0; padding-bottom: 56.25%; position: relative; }
+.iframe-container.three-two { padding-bottom: 66.67%; }
+.iframe-container.square { padding-bottom: 100%; }
+.iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+// mobile only
+@media screen and (max-width: 767px) {
+	input[type="submit"].button-mobile-block, button.button-mobile-block, a.button.button-mobile-block, p.read-more a.button.button-block { display: block; width: 100%; float: none; text-align: center; margin: 0 0 1em; }
+}
+
 // iPad in portrait mode or larger //
 @media screen and (min-width: 768px) {
-	.alignleft { float: left; margin: 0 20px 20px 0; max-width: 50%; }
-	.alignright { float: right; margin: 0 0 20px 20px; max-width: 50%; }
+	.alignleft { float: left; margin: 0 1.3334em 1.3334em 0; max-width: 50%; }
+	.alignright { float: right; margin: 0 0 1.3334em 1.3334em; max-width: 50%; }
 	.aligncenter { display: block; width: auto; margin: 0 auto 1.3334em; }
 }

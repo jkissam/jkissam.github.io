@@ -117,7 +117,7 @@ uwfUtil = {
 		FastClick.attach(document.body);
 
 		// set up navigation, messages, and modals/reveals
-		uwfUtil.prepareNavigation();
+		// uwfUtil.prepareNavigation();
 		uwfUtil.prepareMessages();
 		uwfUtil.prepareModals();
 
@@ -548,6 +548,46 @@ uwfUtil = {
 		var newTop = ( $relativeTo.height() - $el.outerHeight() ) / 2;
 		if (newTop >= 0) { $el.css('top',newTop+'px'); }
 	},
+	
+	loadTwitterJS: function() {
+		window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			t._e = [];
+			t.ready = function(f) {
+				t._e.push(f);
+			};
+			return t;
+		}(document, "script", "twitter-wjs"));
+		
+		twttr.ready( uwfUtil.loadTwitterTimeline );
+	},
+	
+	twitterTimelineLoaded : false,
+	
+	loadTwitterTimeline : function() {
+		if (uwfUtil.twitterTimelineLoaded) { return; }
+		if (jQuery(window).width() < 768) { return; }
+		twttr.widgets.createTimeline(
+			{
+				sourceType: 'profile',
+				screenName: 'domesticleft'
+			},
+			document.getElementById('twitter-timeline'),
+			{
+				height: '300',
+				linkColor: '#f25f70',
+				related: 'domesticleft,smashuppodcast'
+			}
+		).then(function (el) {
+			uwfUtil.twitterTimelineLoaded = true;
+		});
+	}
 
 }
 
@@ -556,6 +596,65 @@ uwfUtil = {
  */
 jQuery(document).ready(function($){
 	uwfUtil.init();
+	uwfUtil.populateInputs('.populate');
+	
+	// replace SVGs with PNGs for browsers that don't support them
+	if (!$('html').hasClass('svg')) {
+		$('.nav-link img').each(function(){
+			$(this).attr('src',$(this).attr('src').replace('.svg','.png'));
+		});
+	}
+	
+	
+	jQuery('.nav-link a').click(function(event) {
+		var target = jQuery(this).attr('href');
+		// console.log(target);
+		if (jQuery(target).length && jQuery(target).hasClass('content-section')) {
+			jQuery(target).addClass('open');
+			jQuery('body').addClass('content-section-open');
+			event.preventDefault();
+		}
+	});
+	
+	jQuery('.content-section').addClass('container-fluid').prepend('<span class="dismiss"/>').append('<div class="border"></div>');;
+	
+	jQuery('.content-section .dismiss').click(function(event){
+		jQuery(this).closest('.content-section').removeClass('open');
+		jQuery('body').removeClass('content-section-open');
+		event.preventDefault();
+	});
+	
+	jQuery('.content-section-wrapper').click(function(event){
+		jQuery('.content-section').removeClass('open');
+		jQuery('body').removeClass('content-section-open');
+		event.preventDefault();
+	});
+	
+	jQuery('.content-section-nav a').click(function(event){
+		event.preventDefault();
+		var next = jQuery(this).hasClass('content-section-next');
+		if (jQuery('.content-section.open').length) {
+			var $next = jQuery(this).attr('href') ? jQuery(jQuery(this).attr('href')) : (next ? jQuery('.content-section.open').next('.content-section') : jQuery('.content-section.open').prev('.content-section'));
+			if ($next.length) {
+				$self = jQuery('.content-section.open');
+				$next.addClass('open');
+				window.setTimeout(function(){ $self.removeClass('open'); }, 300)
+			} else {
+				jQuery('.content-section').removeClass('open');
+				jQuery('body').removeClass('content-section-open');
+			}
+		} else {
+			jQuery('.content-section').eq(0).addClass('open');
+			jQuery('body').addClass('content-section-open');
+		}
+	});
+	
+	if (jQuery('#contact').height() > jQuery(window).height()) {
+		jQuery('#form3').addClass('shortened').css('height',jQuery(window).height() - 300);
+		jQuery('#form3, #form3 *').click(function(){ jQuery('#form3').removeClass('shortened').css('height','auto'); })
+		jQuery('#form3 input, #form3 textarea').focus(function(){ jQuery('#form3').removeClass('shortened').css('height','auto'); })
+	}
+	
 });
 
 /**
@@ -595,9 +694,9 @@ jQuery(window).smartresize(function(){
 if (typeof uwfOptions == 'undefined') {
 	uwfOptions = {
 		validateForms : true,
-		fixFooter : false,
+		fixFooter : true,
 		shortenLinks : true,
-		externalLinks : false,
+		externalLinks : true,
 		externalLinksExceptions : '',
 		sectionNavigationSelector : '.section-navigation',
 		sectionNavigationPadding : 20,

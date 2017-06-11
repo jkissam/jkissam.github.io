@@ -20,7 +20,7 @@
 
 // only apply these css styles if javascript is enabled
 .js #navigation { position: absolute; top: 0; left: 0; right: 0; }
-.js #navigation .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(linear); padding-top: 40px; }
+.js #navigation .main-menu > ul { position: fixed; width: 300px; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: -300px; @include transition-property(left); @include transition-duration(0.15s); @include transition-timing-function(ease); padding-top: 40px; -webkit-overflow-scrolling: touch; }
 .js #navigation .main-menu > ul.open { left: 0; }
 .js #navigation .main-menu > ul ul { position: absolute; left: -9999em; }
 .js #navigation .main-menu > ul ul.open { position: relative; left: auto; }
@@ -29,6 +29,9 @@
 #navigation .main-menu ul li .menu-toggle { content: ''; float: right; display: block; height: 0; width: 0; border: 0.6em solid transparent; margin: 0.8em 1em 0 0.3334em; cursor: pointer; }
 #navigation .main-menu ul li .menu-toggle.closed { border-top-color: $very-dark-gray; }
 #navigation .main-menu ul li .menu-toggle.open { margin-top: 0.2em; border-bottom-color: $very-dark-gray; }
+
+// on-this-page navigation - created by javascript, so hide unless there is javascript
+.no-js #on-this-page { display: none; }
 
 // iPad in portrait mode or larger
 @media screen and (min-width: 768px) {

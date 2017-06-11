@@ -3,11 +3,11 @@ html, body { height: 100%; }
 
 /* large-scale structure */
 
-
+.section-wrapper { padding: 20px 0 0; }
 
 // iPad in portrait mode or larger
 @media screen and (min-width: 768px) {
-	#main-wrapper { padding-top: 20px; }
+	.section-wrapper { padding: 30px 0 0; }
 	
 	#utility-wrapper { position: absolute; top: 0; left: 0; right: 0; }
 	#utility { position: relative; }

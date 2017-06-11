@@ -1,7 +1,8 @@
 // variables
 
 // ### fonts
-$sans-serif: Arial,'Helvetica Neue',Helvetica,sans-serif;
+$sans-serif: Ubuntu,Arial,'Helvetica Neue',Helvetica,sans-serif;
+$header: Oswald,Arial,'Helvetica Neue',Helvetica,sans-serif;
 
 // ### colors
 $very-dark-gray: #333333;
@@ -13,7 +14,13 @@ $smoke: #F5F5F5;
 $ws-blue: #44889F;
 $ws-red: #A62A32;
 
-$base-text: $very-dark-gray;
+$dark-blue: rgb(14, 30, 87);
+$light-blue: rgb(61, 92, 165);
+$yellow: rgb(239, 219, 91);
+$dark-yellow: rgb(242, 188, 80);
+$pink: rgb(242, 95, 112);
+
+$base-text: #404040;
 
 // ### Social media colors
 $pinterest-red:           #D63532;

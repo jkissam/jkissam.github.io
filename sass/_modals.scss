@@ -1,4 +1,4 @@
-// modals and reveals
+// modals
 
 #modals-wrapper { display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; opacity: 0; background: rgba(255, 255, 255, 0.8); @include transition-property(opacity); @include transition-duration(0.15s); @include transition-timing-function(linear); z-index: 314159; overflow-x: hidden; overflow-y: auto; }
 .modal-open #modals-wrapper { opacity: 1; }
