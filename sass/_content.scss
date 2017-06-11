@@ -66,12 +66,16 @@ a.content-section-next { float: right; margin: 0; }
 .instruct { font-size: 0.8em; line-height: 1em; margin: 0.5em 0 1em; color: $medium-gray; }
 #form3 input[type="submit"] { font-size: 1.3334em; text-transform: uppercase; }
 
+// tiny mobile only
+@media screen and (max-width: 399px) {
+	.cta-container p { margin: 0 1em 0.5em; }
+	.js .content-section .content { font-size: 0.86667em; line-height: 1.3846em; }
+	body #footer-wrapper.fixed { padding-bottom: 10px; }
+}
+
 // mobile only
 @media screen and (max-width: 767px) {
-	.cta-container p { margin: 0 1em 0.5em; }
 	#Field4 { height: 39px; display: block; line-height: normal; }
-	// .cta-container a.button-cta { font-size: 0.6667em; }
-	.js .content-section .content { font-size: 0.86667em; line-height: 1.3846em; }
 }
 
 @media screen and (min-width: 360px) {
