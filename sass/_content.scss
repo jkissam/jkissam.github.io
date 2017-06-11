@@ -3,7 +3,7 @@
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
 
-.hero { color: $dark-blue; font-weight: bold; font-size: 5em; line-height: 1em; margin: 0 0 0.16667em; }
+.hero { color: $dark-blue; font-weight: bold; font-size: 5em; line-height: 1em; margin: 0 0 0.06667em; }
 .hero img { margin-left: 10%; max-width: 40%; }
 
 .cta-container { font-size: 1.3334em; line-height: 1.25em; text-align: center; }
