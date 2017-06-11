@@ -5,9 +5,9 @@ body { color: $base-text; font: 93.75%/1.6em $sans-serif; }
 
 // 1.2 Headers
 h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0 0 1em; }
-h1 { font-family: $header; font-size: 2em; line-height: 1.2em; }
-h2 { font-family: $header; font-size: 1.6em; line-height: 1.25em; }
-h3 { font-family: $header; font-size: 1.3334em; line-height: 1.2em; }
+h1 { font-size: 2em; line-height: 1.2em; }
+h2 { font-size: 1.6em; line-height: 1.25em; }
+h3 { font-size: 1.3334em; line-height: 1.2em; }
 h4 { font-size: 1.2em; line-height: 1.3334em; font-weight: bold; }
 h5 { font-size: 1.0666em; font-weight: bold; margin-bottom: 0; }
 h6 { font-size: 1em; font-weight: bold; margin-bottom: 0; }

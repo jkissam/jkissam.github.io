@@ -3,7 +3,7 @@
 .messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
 .messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
 
-.hero { color: $dark-blue; font-weight: bold; font-size: 6em; line-height: 1em; margin: 0 0 0.16667em; }
+.hero { color: $dark-blue; font-weight: bold; font-size: 5em; line-height: 1em; margin: 0 0 0.2em; }
 .hero img { max-width: 50%; }
 
 .cta-container { font-size: 1.6em; line-height: 1.25em; text-align: center; }
@@ -39,7 +39,7 @@
 .no-touch .nav-secondary a:hover { color: $pink; }
 
 .content-section { padding-top: 20px; padding-bottom: 20px; }
-.js .content-section { position: fixed; background: #fff; z-index: 20; top: 0; bottom: 0; left: 100%; width: 100%; overflow-x: hidden; overflow-y: auto; @include transition-property(left); @include transition-duration(0.3s); @incldue transition-timing-function(ease); }
+.js .content-section { position: fixed; background: #fff; z-index: 20; top: 0; bottom: 0; left: 100%; width: 100%; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; @include transition-property(left); @include transition-duration(0.3s); @incldue transition-timing-function(ease); }
 .js .content-section.open { left: 0; }
 .content-section .border { display: none; }
 .content-section .dismiss { float: right; font-size: 3em; margin: 0 0 0.3334em 0.3334em; }
