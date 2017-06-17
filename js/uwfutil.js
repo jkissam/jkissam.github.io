@@ -675,7 +675,7 @@ jQuery(window).load(function(){
 		window.setTimeout(function(){
 			jQuery('#spinner').hide();
 			uwfUtil.openContentSection(window.location.hash);
-		}, 750);
+		}, 2000);
 	}
 });
 
