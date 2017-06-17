@@ -570,7 +570,6 @@ uwfUtil = {
 		if (!uwfUtil.existsOpenContentSection) { jQuery('.content-section').removeClass('open'); }
 		if (!jQuery('.content-section.open').length) {
 			jQuery('body').removeClass('content-section-open');
-		} else {
 			uwfUtil.existsOpenContentSection = false;
 		}
 	}
