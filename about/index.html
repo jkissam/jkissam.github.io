@@ -2,9 +2,15 @@
 <html>
 	<head>
 		<title>About - Jonathan Kissam (redirect)</title>
-		<!-- <meta http-equiv="refresh" content="0; URL='https://jkissam.github.io'" />-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	</head>
-	<body>
-		<a href="/#contact">Contact Me</a>
+	<body style="padding: 20px;">
+		<h1>This page has been moved...</h1>
+		<p>If you are not redirected, please <a href="/">click here to visit my website</a> or <a href="/#contact">click here to contact me</a>.
+		<script type="text/javascript">
+			window.setTimeout( function() {
+				window.location = '/' + window.location.hash;
+			}, 1000);
+		</script>
 	</body>
 </html>
