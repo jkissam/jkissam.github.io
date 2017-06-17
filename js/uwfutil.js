@@ -549,7 +549,7 @@ uwfUtil = {
 		if (newTop >= 0) { $el.css('top',newTop+'px'); }
 	},
 	
-	lastOpenedContentSection : null,
+	existsOpenContentSection : false,
 	
 	openContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
@@ -567,9 +567,11 @@ uwfUtil = {
 	closeContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
 		jQuery(target).removeClass('open');
-		if (!uwfUtil.lastOpenedContentSection) { jQuery('.content-section').removeClass('open'); }
+		if (!uwfUtil.existsOpenContentSection) { jQuery('.content-section').removeClass('open'); }
 		if (!jQuery('.content-section.open').length) {
 			jQuery('body').removeClass('content-section-open');
+		} else {
+			uwfUtil.existsOpenContentSection = false;
 		}
 	}
 
@@ -603,14 +605,14 @@ jQuery(document).ready(function($){
 	jQuery('.content-section .dismiss').click(function(event){
 		jQuery('.content-section').removeClass('open');
 		jQuery('body').removeClass('content-section-open');
-		uwfUtil.lastOpenedContentSection = null;
+		uwfUtil.existsOpenContentSection = false;
 		event.preventDefault();
 	});
 	
 	jQuery('.content-section-wrapper').click(function(event){
 		jQuery('.content-section').removeClass('open');
 		jQuery('body').removeClass('content-section-open');
-		uwfUtil.lastOpenedContentSection = null;
+		uwfUtil.existsOpenContentSection = false;
 		event.preventDefault();
 	});
 	
@@ -618,11 +620,14 @@ jQuery(document).ready(function($){
 		var target = jQuery(this).attr('href');
 		if (!jQuery(target).length || !jQuery(target).hasClass('content-section')) { return true; }
 		if (jQuery(this).hasClass('content-section-prev')) {
+			uwfUtil.existsOpenContentSection = true;
 			target = jQuery(this).closest('.content-section').attr('id');
 			uwfUtil.closeContentSection('#'+target);
 			event.preventDefault();
 		} else {
-			uwfUtil.lastOpenedContentSection = target;
+			if (jQuery('.content-section.open').length) {
+				uwfUtil.existsOpenContentSection = true;
+			}
 			uwfUtil.openContentSection(target);
 			event.preventDefault();
 		}
