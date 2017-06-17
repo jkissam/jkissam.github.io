@@ -549,15 +549,10 @@ uwfUtil = {
 		if (newTop >= 0) { $el.css('top',newTop+'px'); }
 	},
 	
-	lastOpenContentSection : null,
+	lastOpenedContentSection : null,
 	
 	openContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
-		
-		// save last open content section
-		if (jQuery('.content-section.open').length) {
-			uwfUtil.lastOpenContentSection = jQuery('.content-section.open').eq(jQuery('.content-section.open').length - 1).attr('id');
-		}
 		
 		jQuery(target).addClass('open');
 		jQuery('body').addClass('content-section-open');
@@ -572,10 +567,7 @@ uwfUtil = {
 	closeContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
 		jQuery(target).removeClass('open');
-		if (!uwfUtil.lastOpenContentSection || (uwfUtil.lastOpenContentSection == target)) {
-			jQuery('.content-section').removeClass('open');
-			uwfUtil.lastOpenContentSection = null;
-		}
+		if (!uwfUtil.lastOpenedContentSection) { jQuery('.content-section').removeClass('open'); }
 		if (!jQuery('.content-section.open').length) {
 			jQuery('body').removeClass('content-section-open');
 		}
@@ -611,12 +603,14 @@ jQuery(document).ready(function($){
 	jQuery('.content-section .dismiss').click(function(event){
 		jQuery('.content-section').removeClass('open');
 		jQuery('body').removeClass('content-section-open');
+		uwfUtil.lastOpenedContentSection = null;
 		event.preventDefault();
 	});
 	
 	jQuery('.content-section-wrapper').click(function(event){
 		jQuery('.content-section').removeClass('open');
 		jQuery('body').removeClass('content-section-open');
+		uwfUtil.lastOpenedContentSection = null;
 		event.preventDefault();
 	});
 	
@@ -628,6 +622,7 @@ jQuery(document).ready(function($){
 			uwfUtil.closeContentSection('#'+target);
 			event.preventDefault();
 		} else {
+			uwfUtil.lastOpenedContentSection = target;
 			uwfUtil.openContentSection(target);
 			event.preventDefault();
 		}
