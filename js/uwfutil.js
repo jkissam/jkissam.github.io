@@ -549,8 +549,16 @@ uwfUtil = {
 		if (newTop >= 0) { $el.css('top',newTop+'px'); }
 	},
 	
+	lastOpenContentSection : null,
+	
 	openContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
+		
+		// save last open content section
+		if (jQuery('.content-section.open').length) {
+			uwfUtil.lastOpenContentSection = jQuery('.content-section.open').eq(jQuery('.content-section.open').length - 1).attr('id');
+		}
+		
 		jQuery(target).addClass('open');
 		jQuery('body').addClass('content-section-open');
 		
@@ -564,6 +572,10 @@ uwfUtil = {
 	closeContentSection : function(target) {
 		if (!target || !jQuery(target).length || !jQuery(target).hasClass('content-section')) { return; }
 		jQuery(target).removeClass('open');
+		if (!uwfUtil.lastOpenContentSection || (uwfUtil.lastOpenContentSection == target)) {
+			jQuery('.content-section').removeClass('open');
+			uwfUtil.lastOpenContentSection = null;
+		}
 		if (!jQuery('.content-section.open').length) {
 			jQuery('body').removeClass('content-section-open');
 		}
