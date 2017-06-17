@@ -38,9 +38,9 @@
 .nav-secondary a { color: $base-text; }
 .no-touch .nav-secondary a:hover { color: $pink; }
 
-.content-section { padding-top: 20px; padding-bottom: 20px; }
 .js .content-section { position: fixed; background: #fff; z-index: 20; top: 0; bottom: 0; left: 100%; width: 100%; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; @include transition-property(left); @include transition-duration(0.3s); @incldue transition-timing-function(ease); }
 .js .content-section.open { left: 0; }
+.content-section-inner { padding-top: 20px; padding-bottom: 20px; }
 .content-section .border { display: none; }
 .content-section .dismiss { float: right; font-size: 3em; margin: 0 0 0.3334em 0.3334em; }
 .content-section h2 { font-size: 1.2em; text-transform: uppercase; margin-bottom: 0.6667em; }
@@ -62,8 +62,9 @@ a.content-section-next { float: right; margin: 0; }
 #form3 label { font-weight: bold; }
 .subfield { display: block; float: left; width: 49%; }
 .subfield-fn { margin-right: 2%; }
-.subfield label { font-weight: normal; font-size: 0.8em; }
+.subfield label, label.error { font-weight: normal; font-size: 0.8em; }
 .instruct { font-size: 0.8em; line-height: 1em; margin: 0.5em 0 1em; color: $medium-gray; }
+#Field4 { display: block; }
 #form3 input[type="submit"] { font-size: 1.3334em; text-transform: uppercase; }
 
 // tiny mobile only
@@ -75,7 +76,7 @@ a.content-section-next { float: right; margin: 0; }
 
 // mobile only
 @media screen and (max-width: 767px) {
-	#Field4 { height: 39px; display: block; line-height: normal; }
+	#Field4 { height: 39px; line-height: normal; }
 }
 
 @media screen and (min-width: 360px) {
@@ -112,8 +113,9 @@ a.content-section-next { float: right; margin: 0; }
 	.cta-container a.button { margin: 0; }
 	
 	
-	.js .content-section { width: 90%; border-left: 10px solid #ccc; padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; }
+	.js .content-section { width: 90%; border-left: 10px solid #ccc; }
 	.js .content-section.open { left: 10%; }
+	.content-section-inner { padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; position: relative; }
 	.content-section .border { display: block; position: absolute; left: 0px; top: 0; bottom: 0; border-left: 10px solid #ddd; border-right: 10px solid #eee; }
 	
 	a.content-section-prev, a.content-section-next { margin: 1em 0; }
@@ -121,6 +123,9 @@ a.content-section-next { float: right; margin: 0; }
 }
 
 @media screen and (min-width: 992px) {
+	
+	.hero { margin-left: 0; }
+	.cta-container { text-align: left; }
 	
 	.nav-primary ul.row { margin-left: -20px; margin-right: -20px; }
 	.nav-primary ul.row li.col-xs-4 { padding-left: 20px; padding-right: 20px; }
@@ -130,11 +135,11 @@ a.content-section-next { float: right; margin: 0; }
 	// .nav-primary .nav-link img { width: 80%; margin: 0 10%; }
 	.nav-primary .content-section-nav { margin: 0; }
 	.nav-primary .content-section-next { position: fixed; top: 30px; right: 20px; margin: 0; font-size: 1.3334em; }
-	.js .content-section { padding-left: 80px; padding-right: 60px; font-size: 1.2em; line-height: 1.5em; }
+	.content-section-inner { padding-left: 80px; padding-right: 60px; font-size: 1.2em; line-height: 1.5em; }
 
 }
 
 @media screen and (min-width: 1200px) {
 	// .nav-primary .nav-link a { padding: 20px 40px; }
-	.js .content-section { padding-left: 100px; padding-right: 80px; }
+	.content-section-inner { padding-left: 100px; padding-right: 80px; }
 }

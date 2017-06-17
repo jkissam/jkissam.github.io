@@ -72,6 +72,7 @@ input[type="submit"], button, a.button {
   border: 1px solid $very-dark-gray;
   font-size: 1em;
   cursor: pointer;
+  line-height: normal;
 }
 .no-touch input[type="submit"]:hover, .no-touch button:hover, .no-touch a.button:hover {
   background: $pink; border-color: $pink; color: #fff;

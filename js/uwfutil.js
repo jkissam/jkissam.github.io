@@ -172,7 +172,7 @@ uwfUtil = {
 		jQuery('.menu-dismiss').click(function(){ jQuery(this).parent('.main-menu ul').toggleClass('open'); });
 
 		var menuHammer = new Hammer(jQuery('#navigation .main-menu > ul')[0]);
-		menuHammer.on('swipeleft', function(event){
+		menuHammer.on('panleft', function(event){
 			if (jQuery(window).width() < uwfOptions.mobileBreakPoint) { jQuery('#navigation .main-menu > ul').removeClass('open'); }
 		});
 
@@ -616,7 +616,8 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	jQuery('.content-section').addClass('container-fluid').prepend('<span class="dismiss"/>').append('<div class="border"></div>');;
+	jQuery('.content-section').wrapInner('<div class="content-section-inner"/>');
+	jQuery('.content-section-inner').prepend('<span class="dismiss"/>').append('<div class="border"></div>');;
 	
 	jQuery('.content-section .dismiss').click(function(event){
 		jQuery(this).closest('.content-section').removeClass('open');

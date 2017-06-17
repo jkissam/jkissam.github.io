@@ -1,5 +1,6 @@
 // footers
 
-#footer-wrapper.fixed { position: fixed; left: 0; right: 0; bottom: 0; padding-bottom: 20px; }
-
+@media screen and (min-width: 768px) {
+	#footer-wrapper.fixed { position: fixed; left: 0; right: 0; bottom: 0; padding-bottom: 20px; }
+}
 
