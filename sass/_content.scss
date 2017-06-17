@@ -45,8 +45,8 @@
 .content-section .dismiss { float: right; font-size: 3em; margin: 0 0 0.3334em 0.3334em; }
 .content-section h2 { font-size: 1.2em; text-transform: uppercase; margin-bottom: 0.6667em; }
 .content-section-nav {  }
-a.content-section-prev { float: left; margin: 0; }
-a.content-section-next { float: right; margin: 0; }
+a.content-section-prev { float: left; margin: 0 1em 0 0; }
+a.content-section-next { float: right; margin: 0 0 0 1em; }
 
 .content-section-open .content-section-wrapper { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; background: rgba(192, 192, 192, 0.2); cursor: pointer; }
 .no-touch .content-section-open .content-section-wrapper:hover { background: rgba(242, 95, 112, 0.2); }
@@ -65,6 +65,15 @@ a.content-section-next { float: right; margin: 0; }
 .instruct { font-size: 0.8em; line-height: 1em; margin: 0.5em 0 1em; color: $medium-gray; }
 #Field4 { display: block; }
 #form3 input[type="submit"] { font-size: 1.3334em; text-transform: uppercase; }
+
+#spinner { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: $smoke; background: rgba(192, 192, 192, 0.2); display: none; z-index: 314158; }
+.cssanimations #spinner img { position: fixed; display: block; background: transparent; top: 50%; left: 50%; width: 200px; margin-top: -100px; margin-left: -100px; z-index: 314159; -webkit-animation:spin 2s linear infinite; -moz-animation:spin 2s linear infinite; animation:spin 2s linear infinite; }
+#spinner span { display: block; position: fixed; top: 50%; left: 50%; width: 200px; margin-left: -100px; text-align: center; color: $dark-blue; font-size: 2em; }
+.cssanimations #spinner span { margin-top: 105px; }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 // tiny mobile only
 @media screen and (max-width: 399px) {
@@ -116,7 +125,7 @@ a.content-section-next { float: right; margin: 0; }
 	.content-section-inner { padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; position: relative; min-height: 100%; }
 	.content-section .border { display: block; position: absolute; left: 0px; top: 0; bottom: 0; border-left: 10px solid #ddd; border-right: 10px solid #eee; }
 	
-	a.content-section-prev, a.content-section-next { margin: 1em 0; }
+	a.content-section-prev, a.content-section-next { margin-top: 1em; margin-bottom: 1em; }
 
 }
 

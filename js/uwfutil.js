@@ -669,6 +669,14 @@ jQuery(document).ready(function($){
 jQuery(window).load(function(){
 	if (uwfOptions.fixFooter) { uwfUtil.fixFooter(); }
 	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }
+	
+	if (jQuery(window.location.hash).length && jQuery(window.location.hash).hasClass('content-section')) {
+		jQuery('#spinner').show();
+		window.setTimeout(function(){
+			jQuery('#spinner').hide();
+			uwfUtil.openContentSection(window.location.hash);
+		}, 750);
+	}
 });
 
 /**

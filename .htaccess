@@ -1,0 +1,2 @@
+//301 Redirect Entire Directory
+RedirectMatch 301 /about(.*) //$1
