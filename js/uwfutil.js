@@ -596,6 +596,9 @@ jQuery(document).ready(function($){
 		var sectionHammer = new Hammer(this);
 		var target = '#' + jQuery(this).attr('id');
 		sectionHammer.on('panright', function(event){
+			var alertText = uwfUtil.existsOpenContentSection ? 'existsOpenContentSection' : 'doesnotexistOpenContentSection';
+			alertText += ', target: '+target;
+			alert( alertText );
 			uwfUtil.closeContentSection( target );
 		});
 	});
