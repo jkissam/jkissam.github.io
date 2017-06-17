@@ -58,7 +58,6 @@ a.content-section-next { float: right; margin: 0; }
 
 #form3 { max-width: 560px; margin-bottom: 2em; }
 #form3.shortened { overflow: hidden; position: relative; }
-#form3.shortened:after { content: ''; display: block; position: absolute; left: 0; right: 0; bottom: 1px; height: 100px; @include background-image(linear-gradient(transparent, #ffffff)); }
 #form3 label { font-weight: bold; }
 .subfield { display: block; float: left; width: 49%; }
 .subfield-fn { margin-right: 2%; }
@@ -70,8 +69,7 @@ a.content-section-next { float: right; margin: 0; }
 // tiny mobile only
 @media screen and (max-width: 399px) {
 	.cta-container p { margin: 0 1em 0.5em; }
-	.js .content-section .content { font-size: 0.86667em; line-height: 1.3846em; }
-	body #footer-wrapper.fixed { padding-bottom: 10px; }
+	// .js .content-section .content { font-size: 0.86667em; line-height: 1.3846em; }
 }
 
 // mobile only
@@ -115,7 +113,7 @@ a.content-section-next { float: right; margin: 0; }
 	
 	.js .content-section { width: 90%; border-left: 10px solid #ccc; }
 	.js .content-section.open { left: 10%; }
-	.content-section-inner { padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; position: relative; }
+	.content-section-inner { padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; position: relative; min-height: 100%; }
 	.content-section .border { display: block; position: absolute; left: 0px; top: 0; bottom: 0; border-left: 10px solid #ddd; border-right: 10px solid #eee; }
 	
 	a.content-section-prev, a.content-section-next { margin: 1em 0; }
