@@ -619,15 +619,14 @@ jQuery(document).ready(function($){
 	jQuery('a').click(function(event) {
 		var target = jQuery(this).attr('href');
 		if (!jQuery(target).length || !jQuery(target).hasClass('content-section')) { return true; }
-		if (jQuery(this).hasClass('content-section-prev')) {
+		if (jQuery(this).closest('.content-section').length) {
 			uwfUtil.existsOpenContentSection = true;
+		}
+		if (jQuery(this).hasClass('content-section-prev')) {
 			target = jQuery(this).closest('.content-section').attr('id');
 			uwfUtil.closeContentSection('#'+target);
 			event.preventDefault();
 		} else {
-			if (jQuery('.content-section.open').length) {
-				uwfUtil.existsOpenContentSection = true;
-			}
 			uwfUtil.openContentSection(target);
 			event.preventDefault();
 		}
