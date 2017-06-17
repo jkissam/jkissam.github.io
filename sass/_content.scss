@@ -66,7 +66,7 @@ a.content-section-next { float: right; margin: 0 0 0 1em; }
 #Field4 { display: block; }
 #form3 input[type="submit"] { font-size: 1.3334em; text-transform: uppercase; }
 
-#spinner { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: $smoke; background: rgba(192, 192, 192, 0.2); display: none; z-index: 314158; }
+#spinner { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: $smoke; background: rgba(255, 255, 255, 0.8); display: none; z-index: 314158; }
 .cssanimations #spinner img { position: fixed; display: block; background: transparent; top: 50%; left: 50%; width: 200px; margin-top: -100px; margin-left: -100px; z-index: 314159; -webkit-animation:spin 2s linear infinite; -moz-animation:spin 2s linear infinite; animation:spin 2s linear infinite; }
 #spinner span { display: block; position: fixed; top: 50%; left: 50%; width: 200px; margin-left: -100px; text-align: center; color: $dark-blue; font-size: 2em; }
 .cssanimations #spinner span { margin-top: 105px; }
