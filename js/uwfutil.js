@@ -652,8 +652,6 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	uwfUtil.equalizeHeight('.portfolio-row a');
-	
 	jQuery('#Field4').focus(function(){
 		jQuery(this).css('height','auto');
 	});
@@ -702,8 +700,7 @@ jQuery(document).ready(function($){
 jQuery(window).load(function(){
 	if (uwfOptions.fixFooter) { uwfUtil.fixFooter(); }
 	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }
-	uwfUtil.equalizeHeight('.portfolio-row a');
-	
+		
 	if (jQuery(window.location.hash).length && jQuery(window.location.hash).hasClass('content-section')) {
 		jQuery('#spinner').show();
 		window.setTimeout(function(){
@@ -727,9 +724,7 @@ jQuery(document).ajaxComplete(function() {
  */
 jQuery(window).smartresize(function(){
 	if (uwfOptions.fixFooter) { uwfUtil.fixFooter(); }
-	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }
-	uwfUtil.equalizeHeight('.portfolio-row a');
-});
+	if (uwfOptions.shortenLinks) { uwfUtil.shortenLinks(); }});
 
 /**
  * 4. uwfOptions and uwfText
