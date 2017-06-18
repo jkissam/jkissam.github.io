@@ -58,9 +58,13 @@ a.content-section-next { float: right; margin: 0 0 0 1em; }
 .portfolio-row .portfolio-item { padding-bottom: 20px; }
 .portfolio-row .clear-left { clear: left; }
 .portfolio-row img { display: block; }
+.portfolio-row a { color: $base-text; }
+.no-touch .content-section .portfolio-row a:hover { color: $light-blue; text-decoration: none; }
+/*
 .portfolio-row a { display: block; background: $dark-blue; color: #fff; padding: 2px; }
 .portfolio-row a span { display: block; padding: 5px 3px 3px; text-align: center; font-size: 0.8em; line-height: 1em; }
 .no-touch .content-section .portfolio-row a:hover { background: $light-blue; color: #fff; text-decoration: none; }
+*/
 
 #form3 { max-width: 560px; margin-bottom: 2em; }
 #form3.shortened { overflow: hidden; position: relative; }

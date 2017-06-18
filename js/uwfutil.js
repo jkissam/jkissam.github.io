@@ -637,6 +637,7 @@ jQuery(document).ready(function($){
 	
 	jQuery('a').click(function(event) {
 		var target = jQuery(this).attr('href');
+		if (target.indexOf('#') !== 0) { return; }
 		// if (!jQuery(target).length || !jQuery(target).hasClass('content-section')) { return true; }
 		if (jQuery(this).closest('.content-section').length) {
 			uwfUtil.existsOpenContentSection = true;
