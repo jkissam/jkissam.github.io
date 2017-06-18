@@ -618,7 +618,7 @@ jQuery(document).ready(function($){
 	jQuery('.content-section').wrapInner('<div class="content-section-inner"/>').each(function(){
 		var sectionHammer = new Hammer(this);
 		var target = '#' + jQuery(this).attr('id');
-		sectionHammer.on('panright', function(event){
+		sectionHammer.on('swiperight', function(event){
 			uwfUtil.closeContentSection( target );
 		});
 	});
