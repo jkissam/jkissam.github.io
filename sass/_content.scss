@@ -44,6 +44,7 @@
 .content-section .border { display: none; }
 .content-section .dismiss { float: right; font-size: 3em; margin: 0 0 0.3334em 0.3334em; }
 .content-section h2 { font-size: 1.2em; text-transform: uppercase; margin-bottom: 0.6667em; }
+.content-section .feature-image { display: none; }
 .content-section-nav {  }
 a.content-section-prev { float: left; margin: 0 1em 0 0; }
 a.content-section-next { float: right; margin: 0 0 0 1em; }
@@ -54,7 +55,12 @@ a.content-section-next { float: right; margin: 0 0 0 1em; }
 .no-touch .content-section .content a:hover { text-decoration: underline; }
 .no-touch .content-section .dismiss:hover { color: $pink; }
 
-#twitter-timeline { display: none; }
+.portfolio-row .portfolio-item { padding-bottom: 20px; }
+.portfolio-row .clear-left { clear: left; }
+.portfolio-row img { display: block; }
+.portfolio-row a { display: block; background: $dark-blue; color: #fff; padding: 2px; }
+.portfolio-row a span { display: block; padding: 5px 3px 3px; text-align: center; font-size: 0.8em; line-height: 1em; }
+.no-touch .content-section .portfolio-row a:hover { background: $light-blue; color: #fff; text-decoration: none; }
 
 #form3 { max-width: 560px; margin-bottom: 2em; }
 #form3.shortened { overflow: hidden; position: relative; }
@@ -125,6 +131,12 @@ a.content-section-next { float: right; margin: 0 0 0 1em; }
 	.content-section-inner { padding: 40px 40px 40px 60px; font-size: 1.3334em; line-height: 1.5em; position: relative; min-height: 100%; }
 	.content-section .border { display: block; position: absolute; left: 0px; top: 0; bottom: 0; border-left: 10px solid #ddd; border-right: 10px solid #eee; }
 	
+	.content-section .feature-image { display: block; margin-bottom: 40px; }
+	.content-section .feature-image img { display: block; margin: 0 auto; }
+	
+	.portfolio-row .portfolio-item { padding-bottom: 40px; }
+	.portfolio-row a span { padding: 10px 8px 8px; }
+	
 	a.content-section-prev, a.content-section-next { margin-top: 1em; margin-bottom: 1em; }
 
 }
@@ -149,4 +161,10 @@ a.content-section-next { float: right; margin: 0 0 0 1em; }
 @media screen and (min-width: 1200px) {
 	// .nav-primary .nav-link a { padding: 20px 40px; }
 	.content-section-inner { padding-left: 100px; padding-right: 80px; }
+	.portfolio-row .col-xs-6 { padding-left: 100px; padding-right: 100px; }
+}
+
+// retina devices
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	.feature-image img { max-width: 400px; }
 }
