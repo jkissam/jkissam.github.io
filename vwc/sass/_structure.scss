@@ -1,0 +1,47 @@
+html, body { height: 100%; }
+.chromeframe { margin: 0.2em 0; background: $light-gray; color: $base-text; padding: 0.2em 0; }
+
+/* simple clearfix */
+
+.clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+// header
+
+#header { padding-top: 10px; }
+.menu-mobile #header { padding-top: 50px; }
+#header #logo { display: block; width: 225px; }
+#header #logo img { display: block; }
+#header .site-name { margin-bottom: 10px; }
+#header .site-slogan { margin-bottom: 10px; }
+
+// content
+
+.messages { border: 1px solid $light-gray; @include border-radius(5px); padding: 10px; margin-bottom: 1.3334em; }
+.messages .dismiss { float: right; font-size: 2em; margin-left: 1em; }
+
+// footers
+
+#footer-wrapper.fixed { position: fixed; left: 0; right: 0; bottom: 0; }
+
+// iPad in portrait mode or larger
+@media screen and (min-width: 768px) {
+	#main-wrapper { padding-top: 20px; }
+	
+	#header { padding-top: 20px; padding-bottom: 20px; }
+	#header #logo { float: left; margin-right: 20px; }
+	#header .site-name { margin-bottom: 0; }
+	#header .site-slogan { margin-bottom: 0; }
+	
+	#utility-wrapper { position: absolute; top: 0; left: 0; right: 0; }
+	#utility { position: relative; }
+	#utility-inner { position: absolute; top: 20px; right: 20px; }
+}
+
+
+
+
+
