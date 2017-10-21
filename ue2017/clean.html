@@ -1,0 +1,178 @@
+<html>
+
+<head>
+	<style type="text/css">
+		body { font: 93.75%/1.6em Arial,sans-serif; margin: 0; padding: 0; background: #fff; }
+		img { max-width: 100%; }
+		a { color: #DA251D; text-decoration: none; }
+		a:hover { color: #000; }
+		
+		.container { width: 1180px; margin: 0 auto; }
+		.container:after { content: ''; display: table; clear: both; }
+		.row { margin-left: -20px; margin-right: -20px; }
+		.col-sm-6 { float: left; width: 570px; padding-left: 20px; padding-right: 20px; }
+		
+		#header-wrapper { border-bottom: 2px solid #000; background: #DA251D; }
+		.header { padding: 10px 0; width: 1180px; margin: 0 auto; }
+		.header:after { content: ''; display: table; clear: both; }
+		.header #logo { float: left; display: block; width: 174px; margin-right: 1em; }
+		.header .site-slogan { font-size: 2em; font-weight: bold; text-transform: lowercase; padding-top: 69px; color: #fff; }
+		
+		.social-menu { float: right; }
+		.social-menu a { color: #fff; text-decoration: none; margin-left: 1em; }
+		.social-menu a .icon { height: 1.6em; fill: #FFDD1A; stroke: #FFDD1A; fill: #fff; stroke: #fff; }
+		.social-menu a:hover .icon { fill: #000; stroke: #000; fill: #FFDD1A; stroke: #FFDD1A; }
+		
+		.main-menu { padding-top: 10px; }
+		.main-menu a { color: #DA251D; margin-right: 0.5em; padding-right: 0.5em; border-right: 1px solid #000; display: block; float: left; font-size: 1.3334em; line-height: 1em; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+		.main-menu a:last-child { border-right: none; }
+		.main-menu a:hover { color: #000; }
+		
+		#highlighted { padding-top: 40px; }
+		#highlighted-inner { margin-left: -20px; margin-right: -20px; }
+		
+		.image-container { float: left; width: 773px; height: 346px; padding-left: 20px; padding-right: 20px; overflow: hidden; }
+		.image-container img { position: relative; top: -30px; }
+		
+		.button-container { float: left; width: 367px; padding-left: 20px; padding-right: 20px; }
+		.button { padding: 20px; margin: 0 0 20px; background: #f8f8f8; color:  #DA251D; border: 1px solid #DA251D; cursor: pointer; font-weight: bold; height: 60px; position: relative; -webkit-transition-property: background-color; -webkit-transition-duration: 0.33s; }
+		.button:last-child { margin-bottom: 0; }
+		.button:after { content: ''; position: absolute; display: block; height: 0; width: 0; border-left: 20px solid #DA251D; border-top: 51px solid transparent; border-bottom: 51px solid transparent; border-right: 20x solid transparent; top: 0; right: -1px; -webkit-transition-property: right; -webkit-transition-duration: 0.33s; z-index: -1; }
+		.button .title { font-size: 2em; line-height: 1em; display: block; }
+		.button .description { line-height: 1.16667em; }
+		.button:hover { background: #fff; color: #ff0b00; }
+		.button:hover:after { right: -21px; }
+		.button .icon { width: 60px; fill:  #DA251D; stroke:  #DA251D; display: block; float: left; margin-right: 20px; }
+		.button:hover .icon { fill: #ff0b00; stroke: #ff0b00; }
+		.button-highlighted { background: #DA251D; color: #fff; }
+		.button-highlighted .icon { fill: white; stroke: white; }
+		.button-highlighted:hover { background: #ff0b00; border-color: #ff0b00; color: #fff; }
+		.button-highlighted:hover .icon { fill: white; stroke: white; }
+		.button-highlighted:after { border-left-color: #ff0b00; }
+		
+		#news-wrapper { padding-top: 60px; padding-bottom: 60px; }
+		.block { position: relative; }
+		.block h2 { margin: 0; display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-transform: uppercase; background: #DA251D; }
+		.block a.article-link { display: block; position: relative; color: #fff; }
+		.block a.article-link:hover { color: #fff; }
+		.block .article-link img { display: block; }
+		.block .article-link p { position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 70px 20px 10px; margin: 0; font-size: 1.2em; font-weight: bold; line-height: 1.1667em; background: -webkit-linear-gradient(transparent 0%, #000000 100%) }
+		.block a.article-link:hover p span:after { content: ' >'; }
+		.block .read-more { position: absolute; top: 10px; right: 20px; font-size: 1.2em; font-weight: bold; }
+		
+		#ya-wrapper { background: #DA251D; height: 407px; margin-bottom: 60px; }
+		#ya-inner { position: relative; padding-left: 240px; color: #fff; }
+		#ya-logo { width: 200px; position: absolute; left: 0; top: -20px; }
+		#ya-inner h1 { font-size: 5em; line-height: 2em; margin: 0; text-transform: uppercase; }
+	</style>
+</head>
+
+<body>
+	
+	<div id="header-wrapper">
+	<header class="header">
+		<a href="#" id="logo"><img src="logo.png" /></a>
+		<nav class="social-menu">
+			<a href="#">
+				<svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg>
+			</a>
+			<a href="#">
+				<svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M443.8 159.7c.3 4.2.3 8.4.3 12.6 0 128.1-97.5 275.7-275.7 275.7-54.9 0-105.9-15.9-148.8-43.5 7.8.9 15.3 1.2 23.4 1.2 45.3 0 87-15.3 120.3-41.4-42.6-.9-78.3-28.8-90.6-67.2 6 .9 12 1.5 18.3 1.5 8.7 0 17.4-1.2 25.5-3.3-44.4-9-77.7-48-77.7-95.1V199c12.9 7.2 27.9 11.7 43.8 12.3-26.1-17.4-43.2-47.1-43.2-80.7 0-18 4.8-34.5 13.2-48.9 47.7 58.8 119.4 97.2 199.8 101.4-1.5-7.2-2.4-14.7-2.4-22.2 0-53.4 43.2-96.9 96.9-96.9 27.9 0 53.1 11.7 70.8 30.6 21.9-4.2 42.9-12.3 61.5-23.4-7.2 22.5-22.5 41.4-42.6 53.4 19.5-2.1 38.4-7.5 55.8-15-13.2 19.2-29.7 36.3-48.6 50.1z"/></svg>
+			</a>
+			<a href="#">
+				<svg class="icon icon-social" viewBox="0 0 32 27" xmlns="http://www.w3.org/2000/svg"><path d="M 31.5 27 L 19.5 27 L 21.89 24.354 C 21.974 24.27 22 23.955 22 23.484 L 22 7 L 14.134 27 L 5.581 8.372 C 5.364 7.9 5.181 7.285 5 6.777 L 5 20.62 C 5 21.2 4.965 21.273 5.364 21.816 L 9 27 L 0 27 L 3.64 21.817 C 4.039 21.274 4 21.201 4 20.621 L 4 6.27 C 4 5.653 4.095 5.58 3.805 5.219 L 1 1 L 9.495 1 L 16.85 17.3 L 23.24 1 L 31.5 1 L 29.3 3.75 C 28.974 4.076 29 4.349 29 4.856 L 29 23.485 C 29 23.955 29.005 24.235 29.138 24.355 L 31.5 27 Z"/></svg>
+			</a>
+		</nav>
+		<div class="site-slogan">The Members Run This Union</div>
+	</header>
+	</div>
+	
+	<nav class="container main-menu">
+		
+			<a href="#">UE News</a>
+			<a href="#">Political Action</a>
+			<a href="#">Resources</a>
+			<a href="#">About UE</a>
+
+	</nav>
+	
+	<div id="highlighted" class="container"><div id="highlighted-inner">
+		
+<div class="image-container">
+	<img src="hero-clean.jpg" />
+</div>
+	
+<div class="button-container">
+		
+<div class="button button-highlighted">
+	<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+		<path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/>
+		<path d="M 101.193 329.219 C 99.323 325.652 104.574 293.362 107.582 286.224 L 107.09 273.204 C 99.213 261.839 98.732 252.862 98.983 232.176 C 72.742 206.348 63.856 208.421 65.815 156.507 C 60.954 155.198 59.164 134.478 65.57 127.517 C 76.682 126.123 76.9 132.065 79.188 142.885 C 79.726 145.424 79.959 140.011 82.399 138.768 C 86.277 136.79 82.665 154.657 80.065 155.524 C 85.048 158.973 85.999 183.481 94.316 192.376 C 105 192.647 121.826 177.957 136.326 180.338 C 139.583 180.929 141.493 167.296 137.555 166.581 L 133.869 157.981 C 122.34 154.701 137.929 137.992 144.924 135.133 C 159.279 129.265 183.413 152.399 170.967 157.49 C 172.101 160.512 161.961 174.912 161.14 172.722 C 159.791 173.06 159.377 181.147 160.648 180.829 C 164.141 185.82 179.773 189.197 186.69 184.268 C 189.776 181.698 194.341 173.331 195.78 174.195 C 191.82 170.002 196.759 154.346 199.22 144.468 C 203.064 137.287 201.024 134.84 200.447 127.026 C 200.526 123.056 201.418 118.187 203.887 116.952 L 205.607 120.392 C 206.926 112.345 210.476 113.402 211.749 114.25 C 216.509 112.267 223.857 121.592 220.839 122.85 C 221.768 125.17 219.68 134.446 219.365 133.659 C 227.155 138.579 236.599 162.517 235.089 175.67 C 251.685 190.193 279.782 190.361 277.591 188.445 C 276.605 186.565 279.482 180.749 276.59 177.397 C 269.923 169.668 274.227 149.997 280.294 143.732 C 286.602 137.215 295.084 136.149 302.405 144.223 C 308.241 150.08 310.384 175.883 301.912 176.653 C 300.938 177.14 300.3 184.338 301.912 183.531 C 314.248 176.335 345.001 171.664 354.733 174.933 C 355.038 165.3 367.942 141.556 374.388 134.642 C 370.61 133.278 365.596 123.428 374.939 120.565 C 379.168 116.359 383.254 112.576 387.901 120.392 C 393.11 129.483 390.181 142.849 388.392 140.293 C 394.478 150.674 370.328 192.602 362.104 198.763 C 351.497 206.155 332.614 212.793 334.096 214.487 C 335.123 216.541 338.198 249.963 330.411 263.868 C 329.021 268.678 333.523 277.59 327.463 294.086 C 324.334 302.572 328.462 303.779 326.971 310.302 C 326.426 320.642 329.601 318.163 325.498 328.727 L 255.234 328.727 C 252.768 327.318 258.278 313.025 255.234 298.755 C 253.827 289.265 253.538 294.569 250.566 277.381 C 247.568 261.407 252.366 222.118 250.566 219.647 C 244.623 217.586 221.078 199.179 215.434 182.549 C 218.638 186.821 209.026 206.518 197.008 214.733 C 187.814 233.981 184.596 254.3 177.599 271.976 C 175.351 289.848 180.908 328.794 179.811 328.236 L 101.193 329.219 Z" style="stroke: black;"/>
+	</svg>
+	<span class="title">ORGANIZE</span>
+	<span class="description">Join UE to fight for justice at work</span>
+</div>
+
+<div class="button" style="border-bottom: 1px solid #DA251D;">
+	<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/>
+  <path d="M 142.218 367.606 L 149.152 320.983 C 144.677 307.732 120.354 241.938 146.654 212.532 C 149.779 185.912 166.413 173.561 180.947 164.708 C 194.545 161.675 200.899 179.212 194.939 194.798 C 187.425 205.669 180.897 216.344 181.768 225.791 C 186.693 247.685 190.057 255.429 192.26 294.47 L 193.119 302.725 L 252.007 304.514 C 255.011 310.345 258.568 331.514 255.9 339.292 C 252.89 348.368 254.313 355.024 255.816 366.595 L 142.218 367.606 Z"/>
+  <path d="M 194.098 212.877 L 214.608 278.41 L 366.684 277.91 L 300.151 87.314 L 154.077 69.805 L 175.999 158.407 C 182.724 153.884 183.332 154.724 190.598 155.596 C 190.598 155.596 198.388 158.151 202.638 166.332 C 204.706 170.398 204.795 170.906 205.5 173.644 C 205.96 175.433 206.387 178.786 206.27 183.192 C 204.389 192.065 205.995 186.92 202.853 194.517 C 200.078 201.752 196.466 203.783 194.098 212.877 Z"/>
+  <path d="M 146.003 76.441 L 138.258 85.616 L 158.7 172.526 C 161.369 168.98 165.132 164.801 168.082 162.399 L 146.003 76.441 Z"/>
+  <path d="M 189.635 222.604 C 186.782 225.477 190.381 232.376 192.231 239.277 C 193.606 244.402 196.178 255.049 196.86 261.795 C 198.04 273.466 199.019 289.326 199.019 289.326 L 206.838 282.55 L 189.635 222.604 Z"/>
+  <path d="M 200.731 297.357 L 213.65 286.228 L 365.339 286.228 L 351.265 298.217 L 200.731 297.357 Z"/>
+</svg>
+	<span class="title">INFORMATION<br />FOR WORKERS</span>
+</div>
+
+<div class="button">
+	<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+		<path d="M 282.196 350.196 C 301.685 350.115 327.75 253.56 317.979 223.123 C 320.064 224.834 322.627 203.087 318.017 194.247 C 313.176 183.448 306.908 177.691 299.011 173.947 C 317.745 162.983 332.729 147.645 368.42 150.484 C 395.252 151.938 323.021 62.879 312.359 82.622 C 315.701 118.484 245.469 162.184 232.274 171.137 C 219.272 181.079 236.733 211.844 257.19 203.687 L 273.721 192.212 C 270.654 195.279 285.502 228.202 289.879 223.825 C 263.911 254.396 263.9 262.821 250.539 297.588 C 237.633 307.267 183.473 261.832 189.421 251.223 L 221.034 228.04 C 225.311 219.702 219.371 209.096 213.383 210.88 C 203.654 209.125 200.88 206.181 202.679 199.798 C 203.865 193.721 212.742 192.755 205.806 185.475 C 200.166 178.703 192.027 178.698 189.421 179.567 C 154.989 141.886 81.176 182.041 131.113 249.115 C 118.876 253.565 90.021 279.779 94.196 350.239 L 94.196 350.196 L 282.196 350.196 Z"/>
+		<path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/>
+	</svg>
+	<span class="title">TAKE ACTION</span>
+	<span class="description">Sign the petition: No Corporate Power Grab</span>
+</div>
+
+</div>
+	</div></div>
+	
+	<div class="wrapper" id="news-wrapper">
+		<div id="news" class="container">
+			<div id="news-inner" class="row">
+				
+				<div class="col-sm-6 block">
+					<h2>UE News Updates</h2>
+					<a href="#" class="article-link">
+						<img src="image-anne-feeney.jpeg" />
+						<p><span>"Music Instills Power and Bravery": a conversation with Frontline Singer Anne Feeney</span></p>
+					</a>
+					<a href="#" class="read-more">View all &raquo;</a>
+				</div>
+				
+				<div class="col-sm-6 block">
+					<h2>Political Action Updates</h2>
+					<a href="#" class="article-link">
+						<img src="images-sanders-foreign-policy-2.jpg" />
+						<p><span>Sanders&rsquo; Foreign Policy Speech Reflects UE Positions</span></p>
+					</a>
+					<a href="#" class="read-more">View all &raquo;</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="wrapper" id="ya-wrapper">
+		<div id="ya" class="container">
+			<div id="ya-inner">
+				
+				<img src="logo-ya.png" id="ya-logo" />
+				<h1>UE Young Activists</h1>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

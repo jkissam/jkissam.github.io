@@ -1,0 +1,6 @@
+// IE fixes
+
+html.lt-ie8 #header-wrapper, html.lt-ie8 #main-wrapper, html.lt-ie8 #footer-wrapper { position: relative; z-index: 0; }
+html.lt-ie8 input[type="text"], html.lt-ie8 input[type="password"], html.lt-ie8 select, html.lt-ie8 textarea { width: 90%; }
+html.lt-ie8 #navigation li ul.main-menu.dropped { left: 0; }
+html.lt-ie9 img { max-width: none; }
