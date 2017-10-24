@@ -2,75 +2,77 @@
 
 <head>
 	<style type="text/css">
-		body { font: 93.75%/1.6em Arial,sans-serif; margin: 0; padding: 0; background: #fff url(hero-2017.jpg) no-repeat top center; }
+		body { font: 93.75%/1.6em Arial,sans-serif; margin: 0; padding: 0; background: #fff; }
 		img { max-width: 100%; }
 		a { color: #DA251D; text-decoration: none; }
-		a:hover { color: #000; }
+		a:hover { color: #ff0b00; }
 		
 		.container { width: 1180px; margin: 0 auto; }
 		.container:after { content: ''; display: table; clear: both; }
 		.row { margin-left: -20px; margin-right: -20px; }
 		.col-sm-6 { float: left; width: 570px; padding-left: 20px; padding-right: 20px; }
 		
+		#header-wrapper { border-bottom: 3px solid #000; background: #DA251D; }
 		.header { padding: 10px 0; width: 1180px; margin: 0 auto; }
 		.header:after { content: ''; display: table; clear: both; }
-		.header #logo { float: left; display: block; width: 174px; margin-right: 2em; }
-		.header .site-slogan { font-size: 3em; font-weight: bold; text-transform: lowercase; padding-top: 22px; display: none; }
+		.header #logo { float: left; display: block; width: 174px; margin-right: 1em; }
+		.header .site-slogan { font-size: 2em; font-weight: bold; text-transform: lowercase; padding-top: 69px; color: #fff; }
 		
-		.main-menu { float: left; padding-top: 7px; }
-		.main-menu a { display: inline-block; padding: 5px 10px; background: #000; color: #fff; font-weight: bold; text-transform: uppercase; text-decoration: none; margin-right: 1em; font-size: 1.2em; }
-		.main-menu a:hover { background: #DA251D; }
+		.social-menu { float: right; }
+		.social-menu a { color: #fff; text-decoration: none; margin-left: 1em; }
+		.social-menu a .icon { height: 1.6em; fill: #FFDD1A; stroke: #FFDD1A; fill: #fff; stroke: #fff; }
+		.social-menu a:hover .icon { fill: #000; stroke: #000; fill: #FFDD1A; stroke: #FFDD1A; }
 		
-		.social-menu { float: right; padding-top: 7px; }
-		.social-menu a { display: inline-block; padding: 5px 0; background: #000; margin-left: 1em; width: 40px; text-align: center; }
-		.social-menu a .icon { height: 1.6em; fill: #fff; stroke: #fff; }
-		.social-menu a:hover { background: #DA251D; }
+		.main-menu { padding-top: 10px; }
+		.main-menu a { color: #000; margin-right: 0.5em; padding-right: 0.5em; border-right: 1px solid #000; display: block; float: left; font-size: 1.3334em; line-height: 1em; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+		.main-menu a:last-child { border-right: none; }
+		.main-menu a:hover { color: #DA251D; }
 		
-		#highlighted { /* background: #fff url(hero-2017.jpg) no-repeat center -50px; border-top: 2px solid #000; */ padding-top: 150px; padding-bottom: 130px; }
-		.button-container { width: 400px; margin-left: 60%; background: #fff; border: 3px solid #FFF; }
-		.button { padding: 20px 10px; margin: 0 10px; /* border-radius: 20px; */ color:  #DA251D; border: none; cursor: pointer; font-weight: bold; height: 60px; position: relative; -webkit-transition-property: background-color; -webkit-transition-duration: 0.33s; }
-		/* .button:after { content: ''; position: absolute; display: block; height: 0; width: 0; border-left: 20px solid #DA251D; border-top: 51px solid transparent; border-bottom: 51px solid transparent; border-right: 20x solid transparent; top: 0; left: 379px; -webkit-transition-property: left; -webkit-transition-duration: 0.33s; z-index: -1; } */
+		#highlighted { padding-top: 40px; }
+		#highlighted-inner { margin-left: -20px; margin-right: -20px; }
+		
+		.image-container { float: left; width: 773px; height: 346px; padding-left: 20px; padding-right: 20px; overflow: hidden; }
+		.image-container img { position: relative; top: -30px; }
+		
+		.button-container { float: left; width: 363px; padding-left: 20px; padding-right: 20px; }
+		.button { padding: 20px; margin: 0 0 20px; background: #fff; color: #DA251D; border: 3px solid #DA251D; cursor: pointer; font-weight: bold; height: 56px; position: relative; }
+		.button:last-child { margin-bottom: 0; }
+		.button:after { content: ''; position: absolute; display: block; height: 0; width: 0; border-left: 20px solid #DA251D; border-top: 51px solid transparent; border-bottom: 51px solid transparent; border-right: 20x solid transparent; top: -2px; right: -1px; -webkit-transition-property: right; -webkit-transition-duration: 0.33s; z-index: -1; }
 		.button .title { font-size: 2em; line-height: 1em; display: block; }
 		.button .description { line-height: 1.16667em; }
-		.button:hover { background: #fff; color: #ff0b00; }
-		/* .button:hover:after { left: 399px; } */
+		.button:hover { color: #ff0b00; border-color: #ff0b00; }
+		.button:hover:after { right: -23px; border-left-color: #ff0b00; }
 		.button .icon { width: 60px; fill:  #DA251D; stroke:  #DA251D; display: block; float: left; margin-right: 20px; }
 		.button:hover .icon { fill: #ff0b00; stroke: #ff0b00; }
-		.button-highlighted { background: #DA251D; color: #fff; padding: 20px; margin: 0; }
+		.button-highlighted { background: #DA251D; color: #fff; }
 		.button-highlighted .icon { fill: white; stroke: white; }
-		.button-highlighted:hover { background: #ff0b00; color: #fff; }
+		.button-highlighted:hover { background: #ff0b00; border-color: #ff0b00; color: #fff; }
 		.button-highlighted:hover .icon { fill: white; stroke: white; }
-		/* .button-highlighted:before { border-left-color: #ff0b00; } */
+		.button-highlighted:after { border-left-color: #ff0b00; }
 		
-		#news-wrapper { padding-top: 60px; padding-bottom: 60px; background: #fff; }
+		#news-wrapper { padding-top: 60px; padding-bottom: 60px; }
 		.block { position: relative; }
-		.block a { color: #000; }
-		.block a:hover { color: #DA251D; }
-		.block h2 { margin: 0; display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-transform: uppercase; /* background: #DA251D; */ }
+		.block h2 { margin: 0; display: inline-block; background: #000; color: #fff; padding: 10px 20px; text-transform: uppercase; background: #DA251D; }
 		.block a.article-link { display: block; position: relative; color: #fff; }
 		.block a.article-link:hover { color: #fff; }
 		.block .article-link img { display: block; }
 		.block .article-link p { position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 70px 20px 10px; margin: 0; font-size: 1.2em; font-weight: bold; line-height: 1.1667em; background: -webkit-linear-gradient(transparent 0%, #000000 100%) }
 		.block a.article-link:hover p span:after { content: ' >'; }
-		.block .read-more { position: absolute; top: 10px; right: 20px; font-size: 1.2em; font-weight: bold; }
+		.block a.read-more { position: absolute; top: 10px; right: 20px; font-size: 1.2em; font-weight: bold; color: #000; }
 		
 		#ya-wrapper { background: #DA251D; height: 407px; margin-bottom: 60px; }
 		#ya-inner { position: relative; padding-left: 240px; color: #fff; }
 		#ya-logo { width: 200px; position: absolute; left: 0; top: -20px; }
 		#ya-inner h1 { font-size: 5em; line-height: 2em; margin: 0; text-transform: uppercase; }
+		
 	</style>
 </head>
 
 <body>
 	
+	<div id="header-wrapper">
 	<header class="header">
 		<a href="#" id="logo"><img src="logo.png" /></a>
-		<nav class="main-menu">
-			<a href="#">UE News</a>
-			<a href="#">Political Action</a>
-			<a href="#">Resources</a>
-			<a href="#">About UE</a>
-		</nav>
 		<nav class="social-menu">
 			<a href="#">
 				<svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg>
@@ -84,21 +86,49 @@
 		</nav>
 		<div class="site-slogan">The Members Run This Union</div>
 	</header>
+	</div>
 	
-	<div id="highlighted">
+	<div id="navigation-wrapper">
+	<nav class="container main-menu">
+		
+			<a href="#">UE News</a>
+			<a href="#">Political Action</a>
+			<a href="#">Resources</a>
+			<a href="#">About UE</a>
+
+	</nav>
+	</div>
+	
+	<div id="highlighted" class="container"><div id="highlighted-inner">
+		
+<div class="image-container">
+	<img src="hero-2017.jpg" />
+</div>
 	
 <div class="button-container">
 		
 <div class="button button-highlighted">
 	<svg class="icon icon-ue" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+	<!--<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">-->
+		<!--<path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/>
+		<path d="M 101.193 329.219 C 99.323 325.652 104.574 293.362 107.582 286.224 L 107.09 273.204 C 99.213 261.839 98.732 252.862 98.983 232.176 C 72.742 206.348 63.856 208.421 65.815 156.507 C 60.954 155.198 59.164 134.478 65.57 127.517 C 76.682 126.123 76.9 132.065 79.188 142.885 C 79.726 145.424 79.959 140.011 82.399 138.768 C 86.277 136.79 82.665 154.657 80.065 155.524 C 85.048 158.973 85.999 183.481 94.316 192.376 C 105 192.647 121.826 177.957 136.326 180.338 C 139.583 180.929 141.493 167.296 137.555 166.581 L 133.869 157.981 C 122.34 154.701 137.929 137.992 144.924 135.133 C 159.279 129.265 183.413 152.399 170.967 157.49 C 172.101 160.512 161.961 174.912 161.14 172.722 C 159.791 173.06 159.377 181.147 160.648 180.829 C 164.141 185.82 179.773 189.197 186.69 184.268 C 189.776 181.698 194.341 173.331 195.78 174.195 C 191.82 170.002 196.759 154.346 199.22 144.468 C 203.064 137.287 201.024 134.84 200.447 127.026 C 200.526 123.056 201.418 118.187 203.887 116.952 L 205.607 120.392 C 206.926 112.345 210.476 113.402 211.749 114.25 C 216.509 112.267 223.857 121.592 220.839 122.85 C 221.768 125.17 219.68 134.446 219.365 133.659 C 227.155 138.579 236.599 162.517 235.089 175.67 C 251.685 190.193 279.782 190.361 277.591 188.445 C 276.605 186.565 279.482 180.749 276.59 177.397 C 269.923 169.668 274.227 149.997 280.294 143.732 C 286.602 137.215 295.084 136.149 302.405 144.223 C 308.241 150.08 310.384 175.883 301.912 176.653 C 300.938 177.14 300.3 184.338 301.912 183.531 C 314.248 176.335 345.001 171.664 354.733 174.933 C 355.038 165.3 367.942 141.556 374.388 134.642 C 370.61 133.278 365.596 123.428 374.939 120.565 C 379.168 116.359 383.254 112.576 387.901 120.392 C 393.11 129.483 390.181 142.849 388.392 140.293 C 394.478 150.674 370.328 192.602 362.104 198.763 C 351.497 206.155 332.614 212.793 334.096 214.487 C 335.123 216.541 338.198 249.963 330.411 263.868 C 329.021 268.678 333.523 277.59 327.463 294.086 C 324.334 302.572 328.462 303.779 326.971 310.302 C 326.426 320.642 329.601 318.163 325.498 328.727 L 255.234 328.727 C 252.768 327.318 258.278 313.025 255.234 298.755 C 253.827 289.265 253.538 294.569 250.566 277.381 C 247.568 261.407 252.366 222.118 250.566 219.647 C 244.623 217.586 221.078 199.179 215.434 182.549 C 218.638 186.821 209.026 206.518 197.008 214.733 C 187.814 233.981 184.596 254.3 177.599 271.976 C 175.351 289.848 180.908 328.794 179.811 328.236 L 101.193 329.219 Z" style="stroke: black;"/>-->
 		<path d="M 0.659 512.466 C 0.236 414.918 -1.301 267.789 0.003 198.92 C 15.48 192.194 21.836 189.043 32.553 192.075 C 41.09 194.49 50.222 173.54 39.23 166.672 L 20.822 167.032 C -11.352 157.877 -5.53 55.373 55.739 48.05 C 148.382 36.976 155.036 152.264 120.297 166.472 C 103.975 171.657 107.622 170.046 101.805 170.817 C 98.041 171.762 98.061 187.612 100.432 193.443 C 110.18 207.374 153.807 216.799 173.111 203.041 C 181.725 195.868 194.466 172.517 198.481 174.929 C 187.428 163.227 201.213 119.534 208.078 91.964 C 218.81 71.925 213.115 65.095 211.505 43.288 C 211.726 32.208 214.215 18.62 221.104 15.175 L 225.905 24.772 C 229.586 2.315 239.493 5.266 243.048 7.631 C 256.33 2.098 276.838 28.122 268.415 31.633 C 271.01 38.11 265.181 63.997 264.303 61.799 C 286.043 75.53 312.4 142.336 308.185 179.046 C 354.503 219.577 432.917 220.046 426.803 214.699 C 424.05 209.453 435.259 188.979 424.01 183.864 C 402.087 173.895 384.27 82.541 406.175 66.713 C 426.693 51.888 477.279 53.834 497.71 76.367 C 513.999 92.714 518.322 159.755 494.678 181.79 C 491.958 183.149 490.033 198.89 494.678 200.983 C 503.316 197.564 504.406 197.866 512.151 198.293 C 512.276 220.092 513.028 438.719 512.544 511.47 C 512.544 511.47 398.416 512.674 362.645 511.313 C 358.72 484.826 359.674 510.873 351.38 462.905 C 343.012 418.325 356.403 308.674 351.38 301.779 C 334.795 296.027 269.083 244.655 253.332 198.244 C 262.271 210.167 235.447 265.138 201.906 288.065 C 176.248 341.782 167.266 398.49 147.741 447.821 C 141.468 497.699 147.205 513.124 144.142 511.565 L 0.659 512.466 Z" />
 	</svg>
 	<span class="title">ORGANIZE</span>
 	<span class="description">Join UE to fight for justice at work</span>
 </div>
 
-<div class="button" style="border-bottom: 1px solid #DA251D;">
-	<svg class="icon icon-ue" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<div class="button">
+	<!--
+	<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/>
+  <path d="M 142.218 367.606 L 149.152 320.983 C 144.677 307.732 120.354 241.938 146.654 212.532 C 149.779 185.912 166.413 173.561 180.947 164.708 C 194.545 161.675 200.899 179.212 194.939 194.798 C 187.425 205.669 180.897 216.344 181.768 225.791 C 186.693 247.685 190.057 255.429 192.26 294.47 L 193.119 302.725 L 252.007 304.514 C 255.011 310.345 258.568 331.514 255.9 339.292 C 252.89 348.368 254.313 355.024 255.816 366.595 L 142.218 367.606 Z"/>
+  <path d="M 194.098 212.877 L 214.608 278.41 L 366.684 277.91 L 300.151 87.314 L 154.077 69.805 L 175.999 158.407 C 182.724 153.884 183.332 154.724 190.598 155.596 C 190.598 155.596 198.388 158.151 202.638 166.332 C 204.706 170.398 204.795 170.906 205.5 173.644 C 205.96 175.433 206.387 178.786 206.27 183.192 C 204.389 192.065 205.995 186.92 202.853 194.517 C 200.078 201.752 196.466 203.783 194.098 212.877 Z"/>
+  <path d="M 146.003 76.441 L 138.258 85.616 L 158.7 172.526 C 161.369 168.98 165.132 164.801 168.082 162.399 L 146.003 76.441 Z"/>
+  <path d="M 189.635 222.604 C 186.782 225.477 190.381 232.376 192.231 239.277 C 193.606 244.402 196.178 255.049 196.86 261.795 C 198.04 273.466 199.019 289.326 199.019 289.326 L 206.838 282.55 L 189.635 222.604 Z"/>
+  <path d="M 200.731 297.357 L 213.65 286.228 L 365.339 286.228 L 351.265 298.217 L 200.731 297.357 Z"/>
+  -->
+    <svg class="icon icon-ue" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <path d="M 510.763 511.757 C 495 503 466 492 432 464 C 399 438 385.439 426.45 363.478 410.396 C 332.731 387.918 329.97 390.316 294.97 395.217 C 302.772 361.419 317.081 283.261 317.081 283.261 C 317.081 283.261 281.659 287.59 269.497 279.503 C 252.497 269.503 251.329 262.665 246.329 244.665 C 286.329 238.665 299.832 230.41 332.832 209.41 C 344.754 201.206 357.584 205.077 363.9 218.189 L 399.718 312.304 C 409.718 330.304 422.589 343.697 444.352 354.577 C 471.625 368.212 510.734 370.101 510.839 369.578 L 510.763 511.757 Z" />
   <path d="M 318.47 207.542 L 354.667 3.201 L 34.144 154.414 C 60.635 211.538 68.323 385.844 4.368 479.608 L 260.67 509.383 L 303.291 293.949 C 273.975 302.137 235.713 280.281 235.566 234.982 C 274.683 232.082 282.273 228.523 318.47 207.542 Z" />
   <path d="M 328.979 202.288 L 355.251 65.671 C 369.353 59.923 370.823 59.639 385.027 46.988 L 337.737 197.032 L 328.979 202.288 Z" />
@@ -109,6 +139,9 @@
 
 <div class="button">
 	<svg class="icon icon-ue" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+	<!--<svg class="icon icon-ue" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">-->
+		<!--<path d="M 282.196 350.196 C 301.685 350.115 327.75 253.56 317.979 223.123 C 320.064 224.834 322.627 203.087 318.017 194.247 C 313.176 183.448 306.908 177.691 299.011 173.947 C 317.745 162.983 332.729 147.645 368.42 150.484 C 395.252 151.938 323.021 62.879 312.359 82.622 C 315.701 118.484 245.469 162.184 232.274 171.137 C 219.272 181.079 236.733 211.844 257.19 203.687 L 273.721 192.212 C 270.654 195.279 285.502 228.202 289.879 223.825 C 263.911 254.396 263.9 262.821 250.539 297.588 C 237.633 307.267 183.473 261.832 189.421 251.223 L 221.034 228.04 C 225.311 219.702 219.371 209.096 213.383 210.88 C 203.654 209.125 200.88 206.181 202.679 199.798 C 203.865 193.721 212.742 192.755 205.806 185.475 C 200.166 178.703 192.027 178.698 189.421 179.567 C 154.989 141.886 81.176 182.041 131.113 249.115 C 118.876 253.565 90.021 279.779 94.196 350.239 L 94.196 350.196 L 282.196 350.196 Z"/>
+		<path d="M 437.5 225 A 212.5 212.5 0 0 1 225 437.5 A 212.5 212.5 0 0 1 12.5 225 A 212.5 212.5 0 0 1 225 12.5 A 212.5 212.5 0 0 1 437.5 225 Z" style="fill: none; stroke-width: 25;"/> -->
 		<path d="M 37.393 177.25 C 13.438 139.346 8.434 121.31 37.984 101.111 C 56.457 86.992 66.403 85.494 83.431 98.16 C 91.183 109.468 99.151 102.68 108.22 109.964 C 110.764 117.047 102.401 117.638 108.811 128.852 C 104.059 132.281 107.045 139.896 114.713 137.705 C 117.84 137.705 127.931 146.873 125.927 152.461 C 123.551 160.911 105.997 169.886 97.596 173.709 C 95.043 179.297 95.019 179.467 97.006 186.103 C 106.18 202.615 137.912 224.648 156.028 225.058 C 169.773 220.68 193.859 167.023 190.262 148.329 C 181.961 135.738 179.973 128.875 183.179 122.949 L 177.277 117.637 L 163.111 129.442 C 146.595 131.525 124.61 110.666 139.502 99.34 L 210.919 39.137 C 218.139 31.881 211.15 5.98 219.773 4.314 C 253.428 -0.458 284.991 63.261 271.713 73.37 C 264.379 80.415 249.029 68.145 239.25 73.37 L 219.207 82.73 L 220.869 109.507 C 236.294 120.301 230.126 136.568 223.314 143.017 C 239.046 184.787 210.183 275.037 187.901 280.125 L 0.3 279.808 C -0.139 232.946 10.54 196.232 37.393 177.25 Z"/>
 	</svg>
 	<span class="title">TAKE ACTION</span>
@@ -116,9 +149,8 @@
 </div>
 
 </div>
-
-	</div>
-
+	</div></div>
+	
 	<div class="wrapper" id="news-wrapper">
 		<div id="news" class="container">
 			<div id="news-inner" class="row">
